@@ -1,36 +1,24 @@
-<!-- Course management -->
-## Course management
-| | | |
-|-|-|-|
-| <!-- {_class="table-cell"} -->  ![Jacob](https://www.gravatar.com/avatar/b47109ad8c128221c9dd060d15c89cc9.jpg?s=80) <!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> Jacob Lindehoff (Course manager) |
-| <!-- {_class="table-cell"} --> ![John](https://www.gravatar.com/avatar/2261038623688f4d83dc10c53b85efb8.jpg?s=80)<!-- {_class="grayscale"} --> | <!-- {_class="table-cell"} --> John Häggerud (Course instructor) |
-| <!-- {_class="table-cell"} --> ![Thomas](https://lnu.se/ImageVault/publishedmedia/i2aokmyjfagvw0z0uamf/eivth_thomas_ivarsson.jpg)<!-- {_class="grayscale" style="width:80px"} --> | <!-- {_class="table-cell"} --> Thomas Ivarsson |
-
-
-
-<!-- {_class="table lnu-course-management"} -->
-Note:
-* Thomas I.
-
-
-
----
 <!-- Syllabus -->
 ## Syllabus
-
+[Syllabus](http://kursplan.lnu.se/kursplaner/kursplan-2dv514-1.pdf)
 * Main field of study
   * Computer Science (dv)
 * Progression
-  * G1F
+  * G2F
 * Prerequisites
-  *
+  * at least 60 hp Computer Science
+  * 1DV032
 
 
 --
 <!-- Goals -->
 ## After the course you should understand:
 <!-- {_style="font-size: 140%"} -->
-*
+* compare and evaluate different server configuration management platforms
+* generate automatic server configuration
+* describe the components of a server infrastructure
+* create monitoring in an operations environment
+* explain the value, history and building blocks concerning the concept of DevOps
 
 <!-- {_class="lnu-font-size-80 lnu-margin-right-30"} -->
 
@@ -38,7 +26,8 @@ Note:
 ---
 ## Approach
 * The course is divided into two parts
-* Scheduled activities
+    * Theory Assignment
+    * Group Project
 
 <!-- {_style="font-size: 90%"} -->
 
@@ -46,71 +35,35 @@ Note:
 
 --
 <!-- Part 1 -->
-## Part 1 - Computer Networks
+## Part 1 - Configuration Management
 Goals:
-* Understand how the transmitter/receiver model work in TCP/IP based computer communication
-  * transmitter/receiver model
-  * OSI model
-  * TCP/IP-based computer communications
+* compare and evaluate different server configuration management platforms
+    * patterns for defining infrastructure
+    * history
+    * pros and cons
+    * personal preferences
 
 <!-- {_style="margin-right: 25%"} -->
 Todo:
 * 2 lecture
-* 1 seminar
 * 1 examination assignment (written examination)
 
 <!-- {_style="font-size: 75%"} -->
-Note:
-How does computer communicate?<br />
-Pre-recorded lectures<br />
 
 
 --
-## Part 2 - Server operation methods
+## Part 2 - Group Project
 Goals:
-* Methods of operation of server operating system and services
-  * physical
-  * virtualization
+* generate automatic server configuration
+* create monitoring in an operations environment
 
 <!-- {_class="lnu-margin-right-30"} -->
 Todo:
-* 2 lecture
-* 1 seminar
-* 1 examination assignment (written examination)
+* 1 Lecture
+* 1 group assignment
+* 1 oral hearing
 
 <!-- {_style="font-size: 75%"} -->
-Note:
-How can we deploy and manage our servers?<br />
-How do we choose the right methods of operation?<br />
-Start in 2 weeks
-
-
---
-## Part 3 - Server installation and operations
-<!-- {_style="font-size:140%"} -->
-Goals:
-* install and manage Linux and Windows server operating systems
-  * Windows Server & Linux Server
-  * script programing
-
-<!-- {_style="margin-right: 25%"} -->
-* install and manage some server services
-  * DNS and DHCP
-  * Web server
-  * Catalog services
-
-Note:
-
-
---
-## Part 3 - Server installation and operations
-<!-- {_style="font-size:140%"} -->
-Todo:
- * 5 lectures
- * ```x``` exercises
- * 1 examination assignment
- * 1 oral hearing
- * Tutoring
 
 
 --
@@ -124,24 +77,23 @@ Todo:
     </thead>
     <tbody>
         <tr>
-            <td style="vertical-align: top;">w12</td>
+            <td style="vertical-align: top;">w35</td>
             <td>
                 <ul>
-                    <li>Lecture 00 – Introduction (Live)</li>
-                    <li>Lecture 01 - Introduction to computer communication and the OSI model</li>
-                    <li>Lecture 02 - Some TCP/IP protocols</li>
+                    <li>Lecture 00 – Course Introduction   </li>
+                    <li>Lecture 01</li>
+                    <li>Lecture 02</li>
                     <li>Go through the Study Material</li>
-                    <li>Start working on Seminar 1</li>
+                    <li>Start working on the assignment</li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td style="vertical-align: top;">w13</td>
+            <td style="vertical-align: top;">w36</td>
             <td>
                 <ul>
-                    <li>Work with Examination 1 - Computer Networks</li>
-                    <li><strong>March 31st – Deadline</strong> Seminar 1</li>
-                    <li><strong>15.00 March 31st – Deadline handling</strong> in Examination 1</li>
+                    <li>Lecture 03</li>
+                    <li>Assignment</li>
                 </ul>
             </td>
         </tr>
@@ -160,138 +112,28 @@ Todo:
     </thead>
     <tbody>
       <tr>
-          <td style="vertical-align: top;">w14</td>
+          <td style="vertical-align: top;">w37</td>
           <td>
               <ul>
-                  <li><strong>08:00am April 4th - Deadline</strong> hand in peer-review</li>
-                  <li>Lecture 03 - Operating system (Live)</li>
-                  <li>Lecture 04 - “Server” from hardware to software (Live)</li>
-                  <li>Go through the Study Material</li>
-                  <li>Start working on Seminar 2</li>
+                  <li><strong>Lecture 04</li>
+                  <li><strong>10.00am September 15th – Deadline</strong> handling in Assignment</li>
               </ul>
           </td>
       </tr>
       <tr>
-          <td style="vertical-align: top;">w15</td>
+          <td style="vertical-align: top;">w38 - w42</td>
           <td>
               <ul>
-                  <li>Work with Examination 2</li>
-                  <li><strong>April 12th – Deadline</strong> Seminar 2</li>
-                  <li><strong>10.00am April 13th – Deadline</strong> handling in Examination 2</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
-
-
---
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w16</td>
-          <td>
-              <ul>
-                  <li><strong>08:00am April 19th - Deadline</strong> hand in peer-review</li>
-                  <li>Lecture 05 - OS installation and post setup</li>
-                  <li>Lecture 06 - Linux and Bash</li>
-                  <li>Exercise 01 and 02 - Server OS Installation & Post Setup</li>
-                  <li>Supervision</li>
+                  <li>Group Project</li>
+                  <li>Tutoring Tuesdays and Thursdays</li>
               </ul>
           </td>
       </tr>
       <tr>
-          <td style="vertical-align: top;">w17</td>
+          <td style="vertical-align: top;">w43</td>
           <td>
               <ul>
-                  <li>Lecture 7 - Some Server services (Live)</li>
-                  <li>Exercise 03 - Getting started with the Cloud</li>
-                  <li>Exercise 04 - Public Name Servers</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
-
-
---
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w18</td>
-          <td>
-              <ul>
-                  <li>Lecture 8 - Web servers (Live)</li>
-                  <li>Exercise 05 - Web server</li>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w19</td>
-          <td>
-              <ul>
-                  <li>Lecture 9 - Directory Services (Live)</li>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
-
-
---
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w20</td>
-          <td>
-              <ul>
-                  <li>Lecture 10 - Basic security (Live)</li>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w21</td>
-          <td>
-              <ul>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w22</td>
-          <td>
-              <ul>
-                  <li><strong>May 31st – Deadline</strong> Examination Assignment 3</li>
-
+                  <li><strong>October 25th - Deadline</strong> oral hearing</li>
               </ul>
           </td>
       </tr>
@@ -302,29 +144,27 @@ Todo:
 ---
 <!-- Literature -->
 ## Literature
-* [The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/product.aspx?isbn=0321919165)
-  * Limoncelli, Thomas A.; Hogan , Christina J.; Chalup, Strata R.
-  * Addison ­Wesley Professional
-  * Recommended
-  * ISBN: 0321919165
+* [Infrastructure as Code: Managing Servers in the Cloud](http://www.adlibris.com/se/organisationer/product.aspx?isbn=1491924357)
+  * Kief Morris
+  * O'Reilly Media
+  * ISBN: 1491924357
 
-![The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/covers/M/0/32/0321919165.jpg)
-Note:
-Not mandatory but recommended<br />
+![Infrastructure as Code: Managing Servers in the Cloud](http://www.adlibris.com/se/organisationer/covers/M/1/49/1491924357.jpg)
 
 
 ---
 <!-- webpage -->
 ## Course webpage
-https://coursepress.lnu.se/kurs/systemadministrationi/
+[https://coursepress.lnu.se/kurs/configuration-management-for-devops](https://coursepress.lnu.se/kurs/configuration-management-for-devops/)
 * Everything static + news
-* Slack: Discussions and questions [#1dv031-sysadmin-1](https://coursepress.slack.com/archives/1dv031-sysadmin-1)
-* 1dv031@lnu.se (Private matters only!)
+* Slack: Discussions and questions [#2DV514-confman](https://coursepress.slack.com/archives/ 2DV514-confman)
+*  2DV514@lnu.se (Private matters only!)
 
 <!-- {_style="margin-right: 25%"} -->
 
 
 ---
-<!-- webpage -->
+<!-- webpage 
 ## Course evaluation
-[1DV031 Course Evaluation Spring 2016](1dv031-course-evaluation-vt16.pdf)
+[ 2DV514 Course Evaluation Spring 2016]( 2DV514-course-evaluation-vt16.pdf)
+-->
