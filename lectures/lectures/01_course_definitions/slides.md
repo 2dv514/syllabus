@@ -1,313 +1,220 @@
 <!-- Content -->
 ## Content
 
-* Main field of study
-  * Computer Science (dv)
-* Progression
-  * G1F
-* Prerequisites
-  *
+* DevOps
+  * What?
+  * Why?
+  * You and DevOps...
+  * Future
+* Configuration management
+  * Wider definition
+  * Our focus
+  * Infrastructure As Code
 
 
---
-<!-- Goals -->
-## After the course you should understand:
+
+
+---
+<!-- DevOps -->
+## The problem with delivering software
+
 <!-- {_style="font-size: 140%"} -->
-*
+* People
+  * Communication, different goals, culture
+* Processes
+  * Unable to handle changeability, manual workflows, bottlenecks
+* Technology
+  * Drifting servers, "it worked on my machine", slow delivery
 
-<!-- {_class="lnu-font-size-80 lnu-margin-right-30"} -->
+<!-- {_style="margin-right: 25%"} -->
+![Problem with software](../images/image01.gif)
 
 
 ---
-## Approach
-* The course is divided into two parts
-* Scheduled activities
+<!-- DevOps -->
+## The problem with people
 
-<!-- {_style="font-size: 90%"} -->
-
+<img src="../images/devops1.png" align="center" />
 
 
---
+---
 <!-- Part 1 -->
-## Part 1 - Computer Networks
-Goals:
-* Understand how the transmitter/receiver model work in TCP/IP based computer communication
-  * transmitter/receiver model
-  * OSI model
-  * TCP/IP-based computer communications
-
-<!-- {_style="margin-right: 25%"} -->
-Todo:
-* 2 lecture
-* 1 seminar
-* 1 examination assignment (written examination)
-
-<!-- {_style="font-size: 75%"} -->
-Note:
-How does computer communicate?<br />
-Pre-recorded lectures<br />
+## Dev vs. Ops
+* Developers (Devs)
+  * Rewarded for changeability
+* Operations (Ops)
+  * Rewarded for stability and uptime
+* Management (+ sales, customers, QA, testers...) want both
 
 
---
-## Part 2 - Server operation methods
-Goals:
-* Methods of operation of server operating system and services
-  * physical
-  * virtualization
-
-<!-- {_class="lnu-margin-right-30"} -->
-Todo:
-* 2 lecture
-* 1 seminar
-* 1 examination assignment (written examination)
+<p>
+Some days after our release the web server experience high load...who to blame!?<br />
+</p>
+* Developers - The code works on my machine!
+* Ops - The server is working - The code is the problem!
 
 <!-- {_style="font-size: 75%"} -->
 Note:
-How can we deploy and manage our servers?<br />
-How do we choose the right methods of operation?<br />
-Start in 2 weeks
+Silos
 
 
 --
-## Part 3 - Server installation and operations
-<!-- {_style="font-size:140%"} -->
-Goals:
-* install and manage Linux and Windows server operating systems
-  * Windows Server & Linux Server
-  * script programing
+## Conway´s law (1967)
+"Organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
+<br>
+<br>
 
-<!-- {_style="margin-right: 25%"} -->
-* install and manage some server services
-  * DNS and DHCP
-  * Web server
-  * Catalog services
 
-Note:
+![yoda](../images/yoda.gif)
 
 
 --
-## Part 3 - Server installation and operations
-<!-- {_style="font-size:140%"} -->
-Todo:
- * 5 lectures
- * ```x``` exercises
- * 1 examination assignment
- * 1 oral hearing
- * Tutoring
+DevOps is the term to approach this problem! It's a reaction.
+
+* Agile-based companies delivering web software
+  * Dev - Agile and LEAN Processes
+  * Ops - Still waterfall?
+* Devopsday, 2009, Ghent, Belgium
+* DevOps was an reaction! - "Agile system administrators"
+* The need for deep understanding between old silos Dev and Ops
+  * Ops using techniques from developers
+  * Developers getting greater understanding for operations and deployment - Develop for the production environment
+  * Provide both changeability and stability
+  * CAMS (https://blog.chef.io/2010/07/16/what-devops-means-to-me)
 
 
 --
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="vertical-align: top;">w12</td>
-            <td>
-                <ul>
-                    <li>Lecture 00 – Introduction (Live)</li>
-                    <li>Lecture 01 - Introduction to computer communication and the OSI model</li>
-                    <li>Lecture 02 - Some TCP/IP protocols</li>
-                    <li>Go through the Study Material</li>
-                    <li>Start working on Seminar 1</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top;">w13</td>
-            <td>
-                <ul>
-                    <li>Work with Examination 1 - Computer Networks</li>
-                    <li><strong>March 31st – Deadline</strong> Seminar 1</li>
-                    <li><strong>15.00 March 31st – Deadline handling</strong> in Examination 1</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
+## It's about Culture
+
+* Engage early - burst silos!
+* Be open
+* Don´t blame
+* Communications and involvement in every step
+* "You built it, you run it!"
+<br><br>
+![teamwork](../images/teamwork.gif)
 
 
 --
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w14</td>
-          <td>
-              <ul>
-                  <li><strong>08:00am April 4th - Deadline</strong> hand in peer-review</li>
-                  <li>Lecture 03 - Operating system (Live)</li>
-                  <li>Lecture 04 - “Server” from hardware to software (Live)</li>
-                  <li>Go through the Study Material</li>
-                  <li>Start working on Seminar 2</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w15</td>
-          <td>
-              <ul>
-                  <li>Work with Examination 2</li>
-                  <li><strong>April 12th – Deadline</strong> Seminar 2</li>
-                  <li><strong>10.00am April 13th – Deadline</strong> handling in Examination 2</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
+## It's about Automation
+* If you can script it - script it!
+* Consistence and stability using scripts
+* Fast!
+* Automate everything!
+* Infrastructure as Code (IaC)
+* Bringing dev techniques into system administration
 
 
 --
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w16</td>
-          <td>
-              <ul>
-                  <li><strong>08:00am April 19th - Deadline</strong> hand in peer-review</li>
-                  <li>Lecture 05 - OS installation and post setup</li>
-                  <li>Lecture 06 - Linux and Bash</li>
-                  <li>Exercise 01 and 02 - Server OS Installation & Post Setup</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w17</td>
-          <td>
-              <ul>
-                  <li>Lecture 7 - Some Server services (Live)</li>
-                  <li>Exercise 03 - Getting started with the Cloud</li>
-                  <li>Exercise 04 - Public Name Servers</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
+## It's about Measurement
+* Capture and learn!
+* Improve
+* Adjust your understanding based on what you learned
+* Measure "everything"
 
 
 --
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w18</td>
-          <td>
-              <ul>
-                  <li>Lecture 8 - Web servers (Live)</li>
-                  <li>Exercise 05 - Web server</li>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w19</td>
-          <td>
-              <ul>
-                  <li>Lecture 9 - Directory Services (Live)</li>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
+## It's about sharing
+
+* Share ideas, experience, metrics through the organization
+* "Give the devs root access" - co-ownership
+* Learn from metrics
+* "Intern open source"
 
 
 --
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w20</td>
-          <td>
-              <ul>
-                  <li>Lecture 10 - Basic security (Live)</li>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w21</td>
-          <td>
-              <ul>
-                  <li>Working on Examination Assignment 3</li>
-                  <li>Supervision</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w22</td>
-          <td>
-              <ul>
-                  <li><strong>May 31st – Deadline</strong> Examination Assignment 3</li>
+## The need to evolve
 
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
+![table](../images/table.png)
 
 
 ---
-<!-- Literature -->
-## Literature
-* [The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/product.aspx?isbn=0321919165)
-  * Limoncelli, Thomas A.; Hogan , Christina J.; Chalup, Strata R.
-  * Addison ­Wesley Professional
-  * Recommended
-  * ISBN: 0321919165
+<!-- Configuration management -->
+## Configuration management
+"Configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life."
 
-![The Practice of System and Network Administration - Third Edition](http://www.adlibris.com/se/organisationer/covers/M/0/32/0321919165.jpg)
-Note:
-Not mandatory but recommended<br />
+* Military
+* Manage changes throughout the system lifecycle of complex systems
+* ITIL, formally an acronym for Information Technology Infrastructure Library
+  *  ITIL volumes as guidance to their IT organizations
+
+
+--
+## Configuration management
+
+* Mange all of the changes that happen whitin your project.
+* Records the evolution of your systems and applications
+* Handle and govern how your team collaborates
+
+So it is about using version control systems?
+
+
+--
+## Configuration management and DevOps
+
+* Be able to reproduce any of the environments (operating system, patch level, network configs, software stack and so on)
+  * Automation tools, infrastructure as code
+* Be able to handle changes (and roll-backs) to the items and deploy to all of my environments (new OS, new framework version, new features)
+  * Version control
+* Be able to trace all of your changes
+* Manage dependencies, components, software configuration
+* Can every team member get the information they need?
+
+
+--
+## Configuration management - Our focus
+
+* Infrastructure as code (IoC)
+  * Infrastructure automation based on practices for software development
+  * Virtualization, cloud, containers, server automation...
+  * Defining your environments as code
+    * Version control, documentation, no manual differences (snowflake servers)
+* Tools for automation of infrastructure
+  * Chef, Ansible, Puppet...
 
 
 ---
-<!-- webpage -->
-## Course webpage
-https://coursepress.lnu.se/kurs/systemadministrationi/
-* Everything static + news
-* Slack: Discussions and questions [#1dv031-sysadmin-1](https://coursepress.slack.com/archives/1dv031-sysadmin-1)
-* 1dv031@lnu.se (Private matters only!)
+## Challenges for IoC
 
-<!-- {_style="margin-right: 25%"} -->
+  * Server sprawl
+    * It is easy to create new servers, hard to manage to mandatory
+  * Configuration Drift
+    * Difference can creep in over time
+      * Manual "fixing" a specific problem on one servers
+      * Updating the application platform on just some servers (not all applications)
+      * The configuration settings for same kind of servers differs from different people
+      * Someone optimize a specific application server to quickfix a performance issue
+  * Snowflake servers
+    * A server that can´t be replicated === Fragile infrastructure
+  * Automation fear - Kill and rebuild
+  * Erosion
+    * Things will happen over time (security updates, disk space, restart processes, hardware error)
+
+
+--
+## Principle of IoC
+* It should be easy to destroy and rebuild systems/servers
+  * The design should support a infrastructure that is always changing
+  * Treat your servers as cattle, not pets
+* System should be consistent
+  * Same type of servers should have identical configurations - server templates
+* If a task can be scripted, script it!
+  * Definition files, consistency, documentation
+* Testability
 
 
 ---
-<!-- webpage -->
-## Course evaluation
-[1DV031 Course Evaluation Spring 2016](1dv031-course-evaluation-vt16.pdf)
+## Before next time
+
+* Read (at least) chapter 1 in Morris book
+
+![book](../images/book.gif)
+
+http://shop.oreilly.com/product/0636920039297.do
+
+
+---
+# Bye for now!
+
+
+![bye](../images/bye01.gif)
