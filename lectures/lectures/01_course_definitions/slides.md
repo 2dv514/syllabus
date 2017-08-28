@@ -5,13 +5,20 @@
   * What?
   * Why?
   * You and DevOps...
-  * Future
 * Configuration management
   * Wider definition
   * Our focus
   * Infrastructure As Code
 
 
+---
+  ## Conway´s law (1967)
+  "Organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
+  <br>
+  <br>
+
+
+  ![yoda](../images/yoda.gif)
 
 
 ---
@@ -20,14 +27,12 @@
 
 <!-- {_style="font-size: 140%"} -->
 * People
-  * Communication, different goals, culture
+  * Communication, different goals, culture, silos
 * Processes
   * Unable to handle changeability, manual workflows, bottlenecks
 * Technology
   * Drifting servers, "it worked on my machine", slow delivery
-
-<!-- {_style="margin-right: 25%"} -->
-![Problem with software](../images/image01.gif)
+* Bugs, delays and so on...
 
 
 ---
@@ -58,29 +63,22 @@ Note:
 Silos
 
 
---
-## Conway´s law (1967)
-"Organizations which design systems ... are constrained to produce designs which are copies of the communication structures of these organizations."
-<br>
-<br>
-
-
-![yoda](../images/yoda.gif)
 
 
 --
-DevOps is the term to approach this problem! It's a reaction.
+DevOps is a reaction!
 
 * Agile-based companies delivering web software
   * Dev - Agile and LEAN Processes
   * Ops - Still waterfall?
 * Devopsday, 2009, Ghent, Belgium
-* DevOps was an reaction! - "Agile system administrators"
+  * "Agile system administrators"
 * The need for deep understanding between old silos Dev and Ops
   * Ops using techniques from developers
   * Developers getting greater understanding for operations and deployment - Develop for the production environment
   * Provide both changeability and stability
   * CAMS (https://blog.chef.io/2010/07/16/what-devops-means-to-me)
+    * Culture, Automation, Measurement, Sharing
 
 
 --
@@ -102,7 +100,8 @@ DevOps is the term to approach this problem! It's a reaction.
 * Fast!
 * Automate everything!
 * Infrastructure as Code (IaC)
-* Bringing dev techniques into system administration
+  * Bringing dev techniques into system administration
+  * Automated testing
 
 
 --
@@ -110,14 +109,14 @@ DevOps is the term to approach this problem! It's a reaction.
 * Capture and learn!
 * Improve
 * Adjust your understanding based on what you learned
-* Measure "everything"
+* Measure "everything" - Continuous monitoring
 
 
 --
 ## It's about sharing
 
 * Share ideas, experience, metrics through the organization
-* "Give the devs root access" - co-ownership
+* "Give the Devs root access" - co-ownership
 * Learn from metrics
 * "Intern open source"
 
@@ -133,7 +132,6 @@ DevOps is the term to approach this problem! It's a reaction.
 ## Configuration management
 "Configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life."
 
-* Military
 * Manage changes throughout the system lifecycle of complex systems
 * ITIL, formally an acronym for Information Technology Infrastructure Library
   *  ITIL volumes as guidance to their IT organizations
@@ -146,10 +144,16 @@ DevOps is the term to approach this problem! It's a reaction.
 * Records the evolution of your systems and applications
 * Handle and govern how your team collaborates
 
+
+--
+
 So it is about using version control systems?
+<br><br>
+![cleese](../images/cleese.gif)
 
 
 --
+
 ## Configuration management and DevOps
 
 * Be able to reproduce any of the environments (operating system, patch level, network configs, software stack and so on)
@@ -166,9 +170,11 @@ So it is about using version control systems?
 
 * Infrastructure as code (IoC)
   * Infrastructure automation based on practices for software development
+    * Your infrastructure is treated the same way as your code
+    * "Code should be written to describe the desired state of the new machine"
   * Virtualization, cloud, containers, server automation...
   * Defining your environments as code
-    * Version control, documentation, no manual differences (snowflake servers)
+    * code as documentation, no manual differences (snowflake servers)
 * Tools for automation of infrastructure
   * Chef, Ansible, Puppet...
 
@@ -201,19 +207,23 @@ So it is about using version control systems?
 * If a task can be scripted, script it!
   * Definition files, consistency, documentation
 * Testability
+  * Bringing automated testing into Ops
 
 
 ---
-## Before next time
+## Reading to do
 
 * Read (at least) chapter 1 in Morris book
-
-![book](../images/book.gif)
-
-http://shop.oreilly.com/product/0636920039297.do
+  * ![book](../images/book.gif) http://shop.oreilly.com/product/0636920039297.do
+* Infrastructure as code - the engine of DevOps
+  * https://www.epam.com/about/news-and-events/in-the-news/2015/infrastructure-as-code-the-engine-at-the-heart-of-devops
+* 2017 State of DevOps Report
+  * https://puppet.com/resources/whitepaper/state-of-devops-report
 
 
 ---
+
+
 # Bye for now!
 
 
