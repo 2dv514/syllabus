@@ -128,6 +128,17 @@ DevOps is a reaction!
 
 
 ---
+## ...and so on
+
+* DevSecOps
+  * "Everyone is responsible for security"
+  * Security is a roadblock (waterfall syndrome)
+  * http://www.devsecops.org
+* The DevOps Role
+  * Will I work as a DevOps?
+  * Do all companies have a DevOps mindset? 
+
+---
 <!-- Configuration management -->
 ## Configuration management
 "Configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life."
