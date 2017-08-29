@@ -136,7 +136,8 @@ DevOps is a reaction!
   * http://www.devsecops.org
 * The DevOps Role
   * Will I work as a DevOps?
-  * Do all companies have a DevOps mindset? 
+  * Do all companies have a DevOps mindset?
+
 
 ---
 <!-- Configuration management -->
