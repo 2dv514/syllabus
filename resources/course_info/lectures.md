@@ -12,5 +12,5 @@ This is a course introduction that covers the following:
 Course introduction
 
 ## Resources
-- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/00_Course-Introduction/index.html#/)
+- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/lectures/00_Course-Introduction/index.html#/)
 - [Recording](#) 2017-08-30, 13.15 (Youtube)
