@@ -26,7 +26,7 @@
 ---
 ## Approach
 * The course is divided into two parts
-    * Theory Assignment
+    * Configuration Management Techniques
     * Group Project
 
 <!-- {_style="font-size: 90%"} -->
@@ -35,7 +35,7 @@
 
 --
 <!-- Part 1 -->
-## Part 1 - Configuration Management
+## Part 1 - Configuration Management Techniques
 Goals:
 * compare and evaluate different server configuration management platforms
     * patterns for defining infrastructure
@@ -45,7 +45,7 @@ Goals:
 
 <!-- {_style="margin-right: 25%"} -->
 Todo:
-* 2 lecture
+* 3 lecture
 * 1 examination assignment (written examination)
 
 <!-- {_style="font-size: 75%"} -->
@@ -59,7 +59,7 @@ Goals:
 
 <!-- {_class="lnu-margin-right-30"} -->
 Todo:
-* 1 Lecture
+* 2 Lecture
 * 1 group assignment
 * 1 oral hearing
 
