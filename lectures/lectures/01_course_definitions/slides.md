@@ -51,18 +51,16 @@
   * Rewarded for stability and uptime
 * Management (+ sales, customers, QA, testers...) want both
 
+<br>
+<div><!-- {_class="fragment"} -->
+Some days after our release the web server experience high load...who to blame!?
 
-<p>
-Some days after our release the web server experience high load...who to blame!?<br />
-</p>
-* Developers - The code works on my machine!
-* Ops - The server is working - The code is the problem!
+</div>
 
-<!-- {_style="font-size: 75%"} -->
-Note:
-Silos
-
-
+<ul><!-- {_class="fragment"} -->
+  <li>Developers - The code works on my machine!</li>
+  <li>Ops - The server is working - The code is the problem!</li>
+</ul>
 
 
 --
@@ -71,6 +69,7 @@ DevOps is a reaction!
 * Agile-based companies delivering web software
   * Dev - Agile and LEAN Processes
   * Ops - Still waterfall?
+  * Web companies assume higher availability, more frequent updates => destabilizing influences
 * Devopsday, 2009, Ghent, Belgium
   * "Agile system administrators"
 * The need for deep understanding between old silos Dev and Ops
@@ -97,8 +96,8 @@ DevOps is a reaction!
 ## It's about Automation
 * If you can script it - script it!
 * Consistence and stability using scripts
-* Fast!
-* Automate everything!
+* Create fast and automated workflows!
+  * Never pass defects, smaller batches are better
 * Infrastructure as Code (IaC)
   * Bringing dev techniques into system administration
   * Automated testing
@@ -107,7 +106,7 @@ DevOps is a reaction!
 --
 ## It's about Measurement
 * Capture and learn!
-* Improve
+* Improve feedback, shorten feedback loops, amplify
 * Adjust your understanding based on what you learned
 * Measure "everything" - Continuous monitoring
 
@@ -119,6 +118,7 @@ DevOps is a reaction!
 * "Give the Devs root access" - co-ownership
 * Learn from metrics
 * "Intern open source"
+* Experimentation, allocate time to improve the system/flow
 
 
 --
@@ -170,8 +170,9 @@ So it is about using version control systems?
 
 * Be able to reproduce any of the environments (operating system, patch level, network configs, software stack and so on)
   * Automation tools, infrastructure as code
-* Be able to handle changes (and roll-backs) to the items and deploy to all of my environments (new OS, new framework version, new features)
+* Be able to handle changes (and roll-backs) to the items and deploy to all of my environments
   * Version control
+  * Develop vs. testing vs. staging vs. production
 * Be able to trace all of your changes
 * Manage dependencies, components, software configuration
 * Can every team member get the information they need?
@@ -213,7 +214,7 @@ So it is about using version control systems?
 ## Principle of IoC
 * It should be easy to destroy and rebuild systems/servers
   * The design should support a infrastructure that is always changing
-  * Treat your servers as cattle, not pets
+  * "Treat your servers as cattle, not pets"
 * System should be consistent
   * Same type of servers should have identical configurations - server templates
 * If a task can be scripted, script it!
