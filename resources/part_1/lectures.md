@@ -8,7 +8,7 @@
     * Our focus
     * Infrastructure As Code
 
-### presentation
+### Presentation
 - [HTML-presentation](https://rawgit.com/2dv514/syllabus/master/lectures/lectures/01_course_definitions/index.html#/)
 - [Recording 2017-08-29, 13.15 (Youtube)](#)
 <br />
