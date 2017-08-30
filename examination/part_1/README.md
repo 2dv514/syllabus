@@ -1,5 +1,3 @@
-# Examination assignment 1 - 2dv514
-
 ## Part 1 - Evaluation of configuration management tools
 
 In this assignment you are going to learn about modern configuration management tools and show your findings in a written rapport. The goal with this assignment is that you will get deeper understanding of what different modern tools there are for automating the configuration management for infrastructure. You will also compere these tools and try to to describe there differences. At the latest step you should create your own opinion about these tools.
