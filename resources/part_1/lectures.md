@@ -10,8 +10,10 @@
 
 ### Presentation
 - [HTML-presentation](https://rawgit.com/2dv514/syllabus/master/lectures/lectures/01_course_definitions/index.html#/)
-- [Recording 2017-08-29, 13.15 (Youtube)](#)
+- [Recording 2017-08-30, 13.15 (Youtube)](https://youtu.be/TcDamvwNpwU?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
 <br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TcDamvwNpwU?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
+
 
 ### Resources
 * [Infrastructure as code - the engine of DevOps](https://www.epam.com/about/news-and-events/in-the-news/2015/infrastructure-as-code-the-engine-at-the-heart-of-devops)
