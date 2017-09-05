@@ -1,64 +1,61 @@
-<!-- Content -->
+## Configuration management tools...
 
----
-## So configuration management tools...
+* or server configuration management
+* or Automation tools
+* or server orchestration tools
 
-or server configuration management
-or Automation tools
-or server orchestration
 
 --
 ![confuse](../images/confusion.png)
 
 
 --
-
+<div class="center">
 ![What](../images/how.gif)
+</div>
+
 
 ---
-## Some words
+## Some definitions
 
-* Provisioning
-  * Getting host/servers to use (installed and ready)
+* Provisioning (by the books)
+  * "making an infrastructure element"
+  * Getting network device/servers to use (installed, configured and registered)
 * Orchestration
   * Arranging or coordinating multiple systems
+  * Provisioning many servers at once
   * Running same task on many servers at once
+  * Setting up a Dynamic Infrastructure Platform
 * Configuration Management
   * Part of Provisioning
-  * Configure your server Repeatedly
+  * Configure your server repeatedly, consistently, transparent...
 
 
 ---
-![overview](../images/overview.gif)
+![overview](../images/overview.png)
+
 
 ---
-## Dynamic Infrastructure Platform
+## Dynamic Infrastructure tools
 
-* public/private IaaS, CaaS...
-* Programmable
-  * GUI is nice but we want APIs (REST-APIs)
-* On-demand
+* Public/Private IaaS, CaaS...
+  * Cloud formation (AWS), Terraform, OpenStack (Heat)
+  * On-demand
   * Create and destroy immediately (Minutes at the most!)
-* Self-Service
-  * Customize the resources for own use (vs. central solutions)
-  * IaC gives the alternative to automatically create network-, compute and storage resources
-    * Compute resource => servers
-    * storage resources - Block storage, Object storage, Network filesystems
-    * Network resources - Internal and external networks
+  * Self-Service
+* Specifying what infrastructure resources should be allocated  
+* Configuration files describe the components needed to run a single application or your entire datacenter.
+* May create servers but is not responsible on whats on them (but could be)
+* May pass configuration info to a server configuration tool (network addresses)
 
-(Morris - chapter 2)
+(Morris - chapter 2, Should be recap)
 
 
----
-# Infrastructure Definitions tools
+--
+## Infrastructure tools requirements
 
-Specifying what infrastructure resources should be allocated
-Cloud formation (AWS), Terraform, OpenStack Heat
-Configuration files describe the components needed to run a single application or your entire datacenter.
-May create servers but is not responsible on whats on them
-May pass configuration info to a server configuration tool (network addresses)
-
-Some requirements:
+- Programmable
+  - GUI is nice but we want APIs (REST-APIs)
 - Scriptable & Powerful command-line tools
   * CLI that is easy to script
   * Take input from other tools (stdin, environment variables, command-line parameters)
@@ -73,28 +70,87 @@ Some requirements:
   * Transparently, consistently, accurate test instances
   * version control
 
+---
+## How to configure our servers...
+
+  ...in a dynamic infrastructure
+
+  1. Manual Configuration and written documentation
+     - Simple and works in very small situations
+     - Documentation get easy stale
+  2. Some manual, many small scripts
+     - Hard to manage, share, configuration drift, ad-hoc
+     - Writing script code that do stuff step-by-step
+  3. Configure the state rather then step-by-step
+     - Out of state with notify the systems
+     - Using modern configuration tools
+     - Using Domain-specific languages (DSL) instead of script
+     - Self-documention
+
 
 ---
-## About scripts
+## Server change management models
 
-* Idempotent
-  * The script should be able to execute many times without bad effects
-* Pre-checks, Post-checks
-* Visible failures
-  * The team must get the notice
-* Parameterized
+* Ad hoc management
+* Configuration synchronisations
+ * hourly schedules
+ * push or pull changes
+* Immutable Infrastructure
+ * Completely replacing servers
+ * Changes are made by building new servers
+ * Minimal drift between environments
+ * Containerized Infrastructure
 
 
+---
+## Server configuration tools
+  * Create, provision and update servers - new generation tools
+    * Ansible, Chef, Puppet, Salt(Stack)
+  * Configuration enforcement
+    * Desired state (not step-by-step), prevent configuration drift
+  * Enables cooperation
+    * One change, updates the whole infrastructure
+    * Configuration repository
+  * Version control friendly
+  * Abstraction, high-level definitions
+
+
+---
+## Server configuration tools
+  * New servers can be provisioned on demand without waiting (more then minutes)
+  * Provisioned without human involvement (automation)
+  * When server is changed, it should be applied without human involvement
+  * Automated testing is run with every changed
+  * Changes is reflected to all servers it is relevant for.
+  * Change are:
+    * Repeatable
+    * Consistent
+    * Self-documented
+    * Transparently
+
+
+---
+## About automation scripts
+  * Idempotent
+    * The script should be able to execute many times without bad effects
+  * Pre-checks, Post-checks
+    * Testable
+  * Visible failures
+    * The team must get the notice
+  * Parameterized
+  * Big complex system, many script files, hard to manage  
+
+
+---
 ## Configuration Definition files
 
-* Tool-spcific files that drives infrastructure automation tools
-  * Playbooks, manifest, templates...
-* Own DSL (Domain specific languages)
+* Tool-specific files that drives server configuration tools
+  * Own DSL (Domain specific languages), not script languages
+    * Playbooks, manifest, templates, recipes...
 
 ```bash
-#!/bin/bash
-  sudo useradd -m EllenNu -p PASSWORD
-  sudo usermod -a -G students EllenNu
+sudo useradd -m EllenNu -p PASSWORD
+sudo usermod -a -G students EllenNu
 ```
 
 ```yaml
@@ -104,123 +160,29 @@ user "EllenNu"
   home  "/home/ellennu"
   shell "/bin/csh"
 ```
-* clarity, easy to debug
-* Using predefined libraries (working over many platforms)
-* Easy to reuse over different environments - Use parameters
 * Declarative vs imperative
-  * First do X, then do Y
-  * Should be Z
+  * First do X, then do Y vs. should be Z
+  * Clarity, easy to debug
+  * Using predefined libraries (working over many platforms)
+  * Easy to reuse over different environments - Use parameters
 
----
-## Server configuration tools
-* Create, provision and update servers - new generation tools
-
-goals
-
-* Configuration enforcement
-  * Desired state, prevent configuration drift
-* Enables cooperation
-  * One change, updates the whole infrastructure
-  * Configuration repository
-* Version control friendly
-* Abstraction
-
-* New servers can be provisioned on demand without waiting
-* Provisioned without human involvement
-* When server is changed, it should be applied without human envolvment
-* Automated testing is run with every changed
-* Change are repeatable, consistent, self-documented and Transparently
-*  changes is reflected to all servers it is relevant for.
 
 ---
 ## Tools for configuring servers
 
-* Ansible
-* CFEngine
-* Chef
-* Puppet
-* SaltStack
-
-Pull model: Central repository, agents on every node pulling configuration
-Push model: Central server pushing changes (through SSH keys)
-
----
-## How to configure our servers
-In a dynamic infrastructure
-
-1. Manual Configuration and written documentation
-   - Simple and works in very small situations
-   - Documentation get easy stale
-2. Some manual, many small scripts
-   - Hard to manage, share, configuration drift, ad-hoc
-   - Writing script code that do stuff step-by-step
-3. Configure the state rather then step-by-step
-   - Out of state with notify the systems
-   - Using modern configuration tools
-   - Using Domain-specific languages (DSL) instead of script
-   - Self-documention
-
----
-<!-- DevOps -->
-## Infrastructure definition tools
-
-* Orchestration
-* Cloud computing
-
---
-#Configuration register
-
-
----
-## Server configuration tools
-* State of the server
-
-## Image of different tools
-
-
---
-## List of prefereables
-
-* Repeatable
-* Testable
-* reusable
-* self-documenting
-
-
---
-# Scriptable Interface
-
-
---
-## Support for unattended executions
-
-
---
-## Conf definition files
-
---
-
-
----
-## Server change management models
-
-* Ad hoc management
-* Configuration synchronisation
-  * hourly schedules for Examples
-  * push or pull changes
-* Immutable Infrastructure
-  * Completely replacing servers
-  * Changes are made by building new servers
-  * Minimal drift between environments
-  * Containerized Infrastructure
+* Ansible, CFEngine, Chef, Puppet, SaltStack
+* Pull model
+  * Central repository, agents on every node pulling configuration
+* Push model
+  * Central server pushing changes (through SSH keys)
 
 
 ---
 ## Puppet
-Created in 2005
-Open Source, built on top of Ruby
-Requires a central server
-Writing manifests
+* Created in 2005
+* Open Source, built on top of Ruby
+* Requires a central server
+* Writing modules and manifests
 
 ```Ruby
 node 'host2' {
@@ -232,12 +194,14 @@ node 'host2' {
 }
 
 ```
+
+
 --
 ## Chef
-Created in 2008
-Open source, mostly Ruby
-Written by developers from Puppet
-Writing cookbook and recipes
+* Created in 2008
+* Open source, mostly Ruby
+* Written by developers from Puppet
+* Writing cookbook and recipes
 
 ```Ruby
 include_recipe "apache2"
@@ -255,18 +219,15 @@ end
 
 
 --
-#Ansible
-Created in 2012
-SSH keys, no master server
-Playbooks
-Using YAML-configurations
+# Ansible
+* Created in 2012
+* SSH keys, no master server
+* Playbooks, using YAML-configurations
 
 ```YAML
----
 - hosts: webservers
   vars:
     http_port: 80
-    max_clients: 200
   remote_user: root
   tasks:
   - name: ensure apache is at the latest version
@@ -285,4 +246,15 @@ Using YAML-configurations
 
 ---
 ## Written Report
-Dont set up, try to present your findings with relevance to the literature
+* Investigate and compare these techniques
+* No need to set up, try to present your findings with relevance to the literature
+* Explain it as if you were talking to your classmates
+* A couple of pages per technique
+* Think about one of these you want to use to set up a system in the project assignment
+
+
+---
+<br><br>
+<div class="center">
+![bye](../images/bye02.gif)
+</div>
