@@ -20,7 +20,7 @@
 
 * Provisioning (by the books)
   * "making an infrastructure element"
-  * Getting network device/servers to use (installed, configured and registered)
+  * Getting network device/servers ready to use (installed, configured and registered)
 * Orchestration
   * Arranging or coordinating multiple systems
   * Provisioning many servers at once
@@ -50,25 +50,24 @@
 
 (Morris - chapter 2, Should be recap)
 
-
 --
-## Infrastructure tools requirements
+## Tools requirements
 
-- Programmable
-  - GUI is nice but we want APIs (REST-APIs)
-- Scriptable & Powerful command-line tools
-  * CLI that is easy to script
-  * Take input from other tools (stdin, environment variables, command-line parameters)
-  * Output should be able to be used by other tools
-  * Like a Unix CLI
-- Support for unattended execution
-  * No manual steps in the scripts, avoid ad Hoc solutions
-  * Triggable scripts, notifications
-    * testable, auto-scaling and recovery routines
-- Externalized configurations
-  * Treated as software source code
-  * Transparently, consistently, accurate test instances
-  * version control
+  - Programmable
+    - GUI is nice but we want APIs (REST-APIs)
+  - Scriptable & Powerful command-line tools
+    * CLI that is easy to script
+    * Take input from other tools (stdin, environment variables, command-line parameters)
+    * Output should be able to be used by other tools
+    * Like a Unix CLI
+  - Support for unattended execution
+    * No manual steps in the scripts, avoid ad Hoc solutions
+    * Triggable scripts, notifications
+      * testable, auto-scaling and recovery routines
+  - Externalized configurations
+    * Treated as software source code
+    * Transparently, consistently, accurate test instances, version control
+
 
 ---
 ## How to configure our servers...
@@ -78,10 +77,11 @@
   1. Manual Configuration and written documentation
      - Simple and works in very small situations
      - Documentation get easy stale
-  2. Some manual, many small scripts
+  2. Some manual, many automation scripts
      - Hard to manage, share, configuration drift, ad-hoc
      - Writing script code that do stuff step-by-step
-  3. Configure the state rather then step-by-step
+
+  3. **Configure the state** rather then step-by-step
      - Out of state with notify the systems
      - Using modern configuration tools
      - Using Domain-specific languages (DSL) instead of script
@@ -89,13 +89,25 @@
 
 
 ---
+## About automation scripts
+   * Idempotent
+     * The script should be able to execute many times without bad effects
+   * Pre-checks, Post-checks
+     * Testable
+   * Visible failures
+     * The team must get the notice
+   * Parameterized
+   * Big complex system, many script files, hard to manage  
+
+
+---
 ## Server change management models
 
 * Ad hoc management
-* Configuration synchronisations
+* Configuration synchronization
  * hourly schedules
  * push or pull changes
-* Immutable Infrastructure
+* **Immutable** Infrastructure
  * Completely replacing servers
  * Changes are made by building new servers
  * Minimal drift between environments
@@ -115,30 +127,10 @@
   * Abstraction, high-level definitions
 
 
----
-## Server configuration tools
-  * New servers can be provisioned on demand without waiting (more then minutes)
-  * Provisioned without human involvement (automation)
-  * When server is changed, it should be applied without human involvement
-  * Automated testing is run with every changed
-  * Changes is reflected to all servers it is relevant for.
-  * Change are:
-    * Repeatable
-    * Consistent
-    * Self-documented
-    * Transparently
 
 
----
-## About automation scripts
-  * Idempotent
-    * The script should be able to execute many times without bad effects
-  * Pre-checks, Post-checks
-    * Testable
-  * Visible failures
-    * The team must get the notice
-  * Parameterized
-  * Big complex system, many script files, hard to manage  
+
+
 
 
 ---
