@@ -1,9 +1,8 @@
 ## Presentations
-
-To come...
+https://rawgit.com/2dv514/syllabus/master/lectures/lectures/02_configuration_tools/index.html#/
 
 ## Recording
 To come...
 
 ## Resources
-To come...
+Chapter 2-5 in Morris
