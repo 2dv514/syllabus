@@ -18,7 +18,7 @@
 ---
 ## Some words
 
-* Provisioning (by the books)
+* Provisioning (by the book - Morris)
   * "making an infrastructure element"
   * Getting network device/servers ready to use (installed, configured and registered)
 * Orchestration
