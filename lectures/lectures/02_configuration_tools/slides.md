@@ -16,7 +16,7 @@
 
 
 ---
-## Some definitions
+## Some words
 
 * Provisioning (by the books)
   * "making an infrastructure element"
@@ -26,6 +26,7 @@
   * Provisioning many servers at once
   * Running same task on many servers at once
   * Setting up a Dynamic Infrastructure Platform
+  * Automate tasks and orchestrate processes
 * Configuration Management
   * Part of Provisioning
   * Configure your server repeatedly, consistently, transparent...
@@ -61,12 +62,60 @@
     * Output should be able to be used by other tools
     * Like a Unix CLI
   - Support for unattended execution
-    * No manual steps in the scripts, avoid ad Hoc solutions
+    * No manual steps in the scripts, avoid Ad Hoc solutions
     * Triggable scripts, notifications
-      * testable, auto-scaling and recovery routines
+      * Testable, auto-scaling and recovery routines
   - Externalized configurations
     * Treated as software source code
     * Transparently, consistently, accurate test instances, version control
+
+
+---
+
+<div class="center">
+Automate and script everything and you won´t fail!?
+<br><br>
+![garbage](../images/autowrong.gif)
+</div>
+
+
+--
+## Some (wider) automation principles
+* Left-over principle
+  * Automate everything you can - with reason
+* Compensatory Principle
+  * Fitt's list (1951) of attributes "decides" what to automate
+* The Complementary Principle
+  * More from human perspective. Analyze hoe people solve tasks and complement with automation
+  * Give human the knowledge of tasks before automating it
+* Automation bring stability to the system but can take away the skills maintaining the systems   
+* All should be programmers?
+
+Source: The practice of cloud system administration
+
+<!-- {_style="text-align: right; font-size:70%"} -->
+
+
+--
+### When talking about automation scripts
+  * Idempotent
+   * The script should be able to execute many times without bad effects
+  * Pre-checks, Post-checks
+   * Testable
+  * Visible failures
+   * The team must get the notice
+  * Parameterized
+  * Big complex system, many script files, hard to manage  
+
+
+
+--
+## Back to the main story
+
+<!-- {_class="center"} -->
+![mainstory](../images/mainstory.jpg)
+
+<!-- {_class="center"} -->
 
 
 ---
@@ -74,33 +123,21 @@
 
   ...in a dynamic infrastructure
 
-  1. Manual Configuration and written documentation
-     - Simple and works in very small situations
-     - Documentation get easy stale
-  2. Some manual, many automation scripts
+  * Manual Configuration and written documentation
+    * Simple and works in very small situations
+    * Documentation get easy stale
+  * Some manual, many automation scripts
      - Hard to manage, share, configuration drift, ad-hoc
      - Writing script code that do stuff step-by-step
-
-  3. **Configure the state** rather then step-by-step
+  * **Configure the state** rather then step-by-step
      - Out of state with notify the systems
      - Using modern configuration tools
      - Using Domain-specific languages (DSL) instead of script
      - Self-documention
 
 
----
-## About automation scripts
-   * Idempotent
-     * The script should be able to execute many times without bad effects
-   * Pre-checks, Post-checks
-     * Testable
-   * Visible failures
-     * The team must get the notice
-   * Parameterized
-   * Big complex system, many script files, hard to manage  
 
-
----
+--
 ## Server change management models
 
 * Ad hoc management
@@ -114,7 +151,7 @@
  * Containerized Infrastructure
 
 
----
+--
 ## Server configuration tools
   * Create, provision and update servers - new generation tools
     * Ansible, Chef, Puppet, Salt(Stack)
@@ -122,18 +159,13 @@
     * Desired state (not step-by-step), prevent configuration drift
   * Enables cooperation
     * One change, updates the whole infrastructure
-    * Configuration repository
+    * Configuration repository (often enterprise products)
   * Version control friendly
   * Abstraction, high-level definitions
 
 
 
-
-
-
-
-
----
+--
 ## Configuration Definition files
 
 * Tool-specific files that drives server configuration tools
@@ -168,8 +200,12 @@ user "EllenNu"
 * Push model
   * Central server pushing changes (through SSH keys)
 
+<img src="../images/CMTlogos.jpg" width="35%" />
 
----
+<!-- {_class="center"} -->
+
+
+--
 ## Puppet
 * Created in 2005
 * Open Source, built on top of Ruby
