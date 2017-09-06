@@ -1,8 +1,8 @@
 ## Configuration management tools...
 
-* or server configuration management
+* or Server configuration management
 * or Automation tools
-* or server orchestration tools
+* or Server orchestration tools
 
 
 --
@@ -39,7 +39,7 @@
 ---
 ## Dynamic Infrastructure tools
 
-* Public/Private IaaS, CaaS...
+* Public/Private IaaS, Community IaaS...
   * Cloud formation (AWS), Terraform, OpenStack (Heat)
   * On-demand
   * Create and destroy immediately (Minutes at the most!)
@@ -50,6 +50,7 @@
 * May pass configuration info to a server configuration tool (network addresses)
 
 (Morris - chapter 2, Should be recap)
+
 
 --
 ## Tools requirements
@@ -70,7 +71,7 @@
     * Transparently, consistently, accurate test instances, version control
 
 
----
+--
 
 <div class="center">
 Automate and script everything and you won´t fail!?
@@ -79,14 +80,14 @@ Automate and script everything and you won´t fail!?
 </div>
 
 
---
+---
 ## Some (wider) automation principles
 * Left-over principle
   * Automate everything you can - with reason
 * Compensatory Principle
   * Fitt's list (1951) of attributes "decides" what to automate
 * The Complementary Principle
-  * More from human perspective. Analyze hoe people solve tasks and complement with automation
+  * More from human perspective. Analyze how people solve tasks and complement with automation
   * Give human the knowledge of tasks before automating it
 * Automation bring stability to the system but can take away the skills maintaining the systems   
 * All should be programmers?
@@ -140,7 +141,6 @@ Source: The practice of cloud system administration
 --
 ## Server change management models
 
-* Ad hoc management
 * Configuration synchronization
  * hourly schedules
  * push or pull changes
@@ -157,7 +157,7 @@ Source: The practice of cloud system administration
     * Ansible, Chef, Puppet, Salt(Stack)
   * Configuration enforcement
     * Desired state (not step-by-step), prevent configuration drift
-  * Enables cooperation
+  * Enables collaboration
     * One change, updates the whole infrastructure
     * Configuration repository (often enterprise products)
   * Version control friendly
@@ -209,7 +209,6 @@ user "EllenNu"
 ## Puppet
 * Created in 2005
 * Open Source, built on top of Ruby
-* Requires a central server
 * Writing modules and manifests
 
 ```Ruby
@@ -249,7 +248,7 @@ end
 --
 # Ansible
 * Created in 2012
-* SSH keys, no master server
+* SSH keys
 * Playbooks, using YAML-configurations
 
 ```YAML
@@ -275,7 +274,7 @@ end
 ---
 ## Written Report
 * Investigate and compare these techniques
-* No need to set up, try to present your findings with relevance to the literature
+* No need to set up, try to present your findings with relevance to the literature and this lecture
 * Explain it as if you were talking to your classmates
 * A couple of pages per technique
 * Think about one of these you want to use to set up a system in the project assignment
