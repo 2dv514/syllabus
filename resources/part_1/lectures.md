@@ -21,9 +21,15 @@
 * [Learning object Linux](https://github.com/CS-LNU-Learning-Objects/linux)
 
 ## Lecture 02 - Configuration management tools
+* or server configuration management
+* or Automation tools
+* or server orchestration tools
+
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/lectures/02_configuration_tools/index.html#/)
-
+- [Recording 2017-09-06, 13.15 (Youtube)](https://youtu.be/qfWyeMokBPE?t=14m46s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
+<br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qfWyeMokBPE?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
 
 ### Recording
 To come...
