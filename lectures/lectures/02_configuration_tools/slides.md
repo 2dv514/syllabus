@@ -106,7 +106,7 @@ Source: The practice of cloud system administration
   * Visible failures
    * The team must get the notice
   * Parameterized
-  * Big complex system, many script files, hard to manage  
+  * Big complex system, many script files, hard to manage, API versioning  
 
 
 
