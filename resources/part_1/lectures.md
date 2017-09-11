@@ -9,7 +9,7 @@
     * Infrastructure As Code
 
 ### Presentation
-- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/lectures/01_course_definitions/index.html#/)
+- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/01_course_definitions/index.html#/)
 - [Recording 2017-08-30, 13.15 (Youtube)](https://youtu.be/duxvJXAldNA?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/duxvJXAldNA?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
@@ -26,7 +26,7 @@
 * or server orchestration tools
 
 ### Presentations
-- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/lectures/02_configuration_tools/index.html#/)
+- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/02_configuration_tools/index.html#/)
 - [Recording 2017-09-06, 13.15 (Youtube)](https://youtu.be/qfWyeMokBPE?t=13m46s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qfWyeMokBPE?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
@@ -38,7 +38,7 @@ Chapter 2-5 in Morris
 * 
 
 ### Presentations
-- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/lectures/03_patterns/index.html#/)
+- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/03_patterns/index.html#/)
 - [Recording 2017-09-13, 13.15 (Youtube)](#)
 <br />
 
