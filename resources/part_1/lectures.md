@@ -31,8 +31,16 @@
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qfWyeMokBPE?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
 
-### Recording
-To come...
-
 ### Resources
 Chapter 2-5 in Morris
+
+## Lecture 03 - Patterns
+* 
+
+### Presentations
+- [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/lectures/03_patterns/index.html#/)
+- [Recording 2017-09-13, 13.15 (Youtube)](#)
+<br />
+
+### Resources
+Chapter 6-9 in Morris
