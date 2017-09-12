@@ -35,7 +35,12 @@
 Chapter 2-5 in Morris
 
 ## Lecture 03 - Patterns
-* 
+* Patterns for...
+    * provisioning servers
+    * server templates
+    * managing server changes and updates
+    * defining infrastructure
+
 
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/03_patterns/index.html#/)
