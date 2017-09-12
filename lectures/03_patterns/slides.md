@@ -172,10 +172,99 @@ Time to bake it into a server template
   * Openstack image
   * AWS AMI
   * VMWare server template
-* Multiple platforms
+* multiple platforms
 
 
 --
-## Updating a Server Template
-* Reheating a Template
-* Baking a Fresh template
+## Maintaining a Server Template
+* Reheating a template
+* Baking a fresh template
+* Versioning
+* Traceability
+* Removing templates
+
+
+---
+## Patterns for
+### managing server changes and updates
+* Easy to create new servers, but keeping them up to date is hard.
+* Often leeds to inconsistent servers and server drift
+* Process for managing server changes:
+  * ensures that all new changes are applied to both existing and new server
+  * all server should be up to date with:
+    * latest approved packages
+    * patches
+    * configuration
+
+
+--
+## Managing server changes
+Characteristics of an effective server change process:
+* automated process
+* effects all relevant servers
+* similar servers are not allowed to drift into inconsistency
+* unattended process
+* effort involved in a change is the same
+* errors are made visible quickly.
+
+Note:
+The automated process is the easiest, most natural way for team members to make changes. <br />
+Changes are rolled out to all of the relevant existing servers. <br />
+Servers that are meant to be similar are not allowed to drift into inconsistency. <br />
+Changes are applied as an unattended process. <br />
+The effort involved in a change is the same, regardless of how many servers are affected by it. <br />
+Errors changes are made visible quickly. <br />
+
+
+--
+## Server Change Management Models
+* Ad Hoc Change Management
+* Continuous Configuration Synchronization
+* Immutable Servers
+* Containerized Servers
+
+
+--
+## General Patterns and Practices
+![Server templates with continuous synchronization](../images/l03-server-templates-with-continuous-synchronization.png)
+
+<!-- {_style="float: right"} -->
+
+* minimize server templates
+* replace servers when the server template change
+* Phoenix servers
+<br /><br /><br /><br /><br />
+
+
+Source: Infrastructure as Code
+
+<!-- {_style="text-align: right; font-size:60%"} -->
+
+
+--
+## Continuous Configuration
+* push or pull to synchronize
+* materless configuration management 
+* server configuration tool to continuously synchronize configuration 
+![Using the same configuration tool across the server lifecycle](../images/l03-configuration-tool-across-the-server-lifecycle.png)
+
+Source: Infrastructure as Code
+
+<!-- {_style="text-align: right; font-size:60%"} -->
+
+
+--
+## Immutable Servers
+* server image as artifact
+* simplifies confirmation management tooling
+* immutable server flow
+
+![Immutable server flow](../images/l03-immutable-server-flow.png)
+
+Source: Infrastructure as Code
+
+<!-- {_style="text-align: right; font-size:60%"} -->
+
+
+---
+## Patterns for defining infrastructure
