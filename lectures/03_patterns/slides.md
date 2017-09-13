@@ -24,7 +24,7 @@ registration - infrastructure services, monitoring and DNS
 
 --
 ## Patterns for provisioning servers
-### Characteristics of an effective provisioning process
+Characteristics of an effective provisioning process
 * Infrastructure elements can be rebuilt on demand
 * Define elements once -> roll out to multiple
 * Transparent and easily modified
@@ -61,7 +61,10 @@ Note:
 --
 ## Whats on a server?
 * Software
-* Configuration
+  * applications
+  * libraries
+  * files that are static
+* Configuration files 
 * Data
 
 How does configuration management treats this?
@@ -71,9 +74,9 @@ Note:
 *Configuration* - Files used to control how the system and/or applications work. <br />
 *Data* - Files generated and updated by the system, applications, and so on.  <br />
  <br />
-*Software* - Makes sure it’s the same on every relevant server; doesn’t care what’s inside <br />
-*Configuration* - Makes sure it has the right contents on every relevant server; will make sure it’s consistent and correct. <br />
-*Data* - Naturally occurring and changing; may need to preserve it, but won’t try to manage what’s inside. <br />
+*Software* - Makes sure it’s the **same on every relevant server**; doesn’t care what’s inside <br />
+*Configuration* - Makes sure it has the **right contents on every relevant server**; will make sure it’s **consistent and correct**. <br />
+*Data* - Naturally occurring and changing; **may need to preserve it**, but **won’t try to manage what’s inside**. <br />
 
 
 --
@@ -93,6 +96,10 @@ Consistency, security,
 
 --
 ## Server Roles
+
+![Example of a simple hierarchy of server templates](../images/l03-hierarchy-of-server-templates.png)
+
+<!-- {_style="width:38%; float: right;"} -->
 * What is the purpose of the server?
 * Puppet calls is "classes"
 
@@ -113,11 +120,18 @@ openstack server create --flavor m1.medium --image "fedora-21-atomic"           
 * Server Template
 * Snowflake factory - Antipattern
 
+Note:
+*Handcrafted Server* - create a new server is to use an **interactive UI or command-line** tool to **specify each of the options** needed<br />
+*Wrap Server Creation Options in a Script* - capture the process for creating new servers so that it’s **easily repeatable**.<br />
+*Hot Cloned Server* - server sprawl and configuration drift, not reproducible
+*Server Template* - snapshot of a server and using that as a template, template is **static**, won’t stay consistent. <br />
+*Snowflake factory* - adopt **automated tools** to provision servers, but a person still creates each one by **running the tool and choosing options for the particular server**
+
 
 --
 ## Smoke Test new servers
-* Automatically created servers should be automatically tested
-* Based on the server role:
+* automatically created servers should be automatically tested
+* based on the server role and general compliance:
   * server running and accessible
   * monitoring agent
   * DNS
@@ -126,17 +140,24 @@ openstack server create --flavor m1.medium --image "fedora-21-atomic"           
   * accounts
 * should be used in CI and CD
 
+Note:
+In an ideal world, automation means you can trust that every new server was built without flaws
+
 
 ---
 ## Patterns for server templates
 * A starting point for a new server
 * Build new servers consistently and repeatably
-* Process of building a server template should be:
+* Ideal process of building a server template should be:
   * repeatable
   * transparent
   * self-documenting
   * self-testing
 * Stock Template or do it yourself?
+
+Note:
+The process and tooling for this should follow the **principles of infrastructure as code**<br />
+Many OS vendors and cloud services provide prepackaged
 
 
 --
@@ -150,46 +171,111 @@ openstack server create --flavor m1.medium --image "fedora-21-atomic"           
 ## Selecting an origin image
 * Hot Cloned Server Template - Antipattern
 * OS installation image
+  * consistent starting point
+  * most IaaS do not allow it
 * Stock image
+  * intended to be useful for many
+  * strip out
+    * unwanted packages
+    * user accounts
+    * services
+    * configuration
+
+Note:
+*Hot Cloned Server Template* - Templates should be created from a **clean server**, one that has never been used for any other purpose<br />
+*OS installation image* - provides a clean, **consistent starting point**, most IaaS cloud platforms **don’t** provide an easy way to **boot servers directly from an ISO** <br />
+*Stock image* - vendor’s stock images are often intended to be useful for many needs so **strip out unwanted packages, user accounts, services, and configuration**
 
 
 --
 ## Applying customizations to the image
-Ways to apply customization
-* Boot the origin images and apply changes
-* Mount origin image and apply changes
-
-What should be included?
-* Provisioning at Creation Time
-* Provisioning in the Template
-* Mixed
+* Ways to apply customization
+  * Boot the origin images and apply changes
+    * easy
+  * Mount origin image and apply changes
+    * more complex
+    * fast
+    * little or no pollution of the template server image
+* What should be included?
+  * Provisioning at Creation Time
+    * minimizing what’s on the template
+    * provisioning when a new server is created
+  * Provisioning in the Template
+    * putting nearly everything into the server template
+  * Mixed
 
 
 --
 ### Packaging the image into a server template
 Time to bake it into a server template
-* saved into a format recognized by your infrastructure:
+
+```nginx
+{
+ ... (common configuration goes here) ...
+  "builders": [ 
+    {
+      "type": "amazon-ebs"
+      "access_key": "abc"
+      "secret_key": "xyz"
+      "region": "eu-west-1"
+      "source_ami": "ami-12345678"
+      "instance_type": "t2.micro" "ami_name": "our-base "
+    }, {
+      "type": "openstack",
+      "username": "packer",
+      "password": "packer",
+      "region": "DFW",
+      "ssh_username": "root",
+      "image_name": "Our-Base",
+      "source_image": "12345678-abcd-fedc-aced-0123456789ab",
+      "flavor": "2" 
+    }, {
+      "type": "virtualbox-iso",
+      "guest_os_type": "Ubuntu_64",
+      "iso_url": "http://repo/ubuntu-base-amd64.iso", 
+      "ssh_username": "packer",
+      "ssh_password": "packer"
+    } 
+  ]
+}
+```
+<!-- {_style="font-size:40%; float: right; width: 50%"} -->
+
+* saved into a format recognized by <br />
+    your infrastructure:
   * Openstack image
   * AWS AMI
   * VMWare server template
 * multiple platforms
 
+<br /><br /><br /><br /><br />
+Sample Packer template for multiple platforms
+<!-- {_style="text-align: right; font-size:60%"} -->
+
 
 --
 ## Maintaining a Server Template
-* Reheating a template
-* Baking a fresh template
-* Versioning
-* Traceability
-* Removing templates
+* reheating a template
+* baking a fresh template
+* versioning
+  * traceability
+  * removing templates
+
+Note:
+*Reheating a template* - templates can accumulate cruft
+*Baking a fresh template* - same origin image
+*Versioning* - old template image should never be overwritten
+*Traceability* - 
+*Removing templates* - 
+
 
 
 ---
 ## Patterns for
 ### managing server changes and updates
-* Easy to create new servers, but keeping them up to date is hard.
-* Often leeds to inconsistent servers and server drift
-* Process for managing server changes:
+* easy to create new servers, but keeping them up to date is hard
+* often leeds to inconsistent servers and server drift
+* process for managing server changes:
   * ensures that all new changes are applied to both existing and new server
   * all server should be up to date with:
     * latest approved packages
@@ -204,24 +290,33 @@ Characteristics of an effective server change process:
 * effects all relevant servers
 * similar servers are not allowed to drift into inconsistency
 * unattended process
-* effort involved in a change is the same
-* errors are made visible quickly.
+* errors are made visible quickly
 
 Note:
 The automated process is the easiest, most natural way for team members to make changes. <br />
-Changes are rolled out to all of the relevant existing servers. <br />
-Servers that are meant to be similar are not allowed to drift into inconsistency. <br />
-Changes are applied as an unattended process. <br />
-The effort involved in a change is the same, regardless of how many servers are affected by it. <br />
+**Changes** are rolled out to **all of the relevant existing servers**. <br />
+**Servers that are meant to be similar** are not allowed to drift into inconsistency. <br />
+**Changes are applied** as an **unattended** process. <br />
+The **effort involved in a change** is the same, regardless of **how many servers are affected by it.** <br />
 Errors changes are made visible quickly. <br />
 
 
 --
 ## Server Change Management Models
 * Ad Hoc Change Management
+  * when a change is needed
 * Continuous Configuration Synchronization
+  * most server configuration tools
+  * runs on an unattended schedule, usually at least once an hour
 * Immutable Servers
+  * building an entirely new server upon changes
+  * configuration os baked into the server template
+  * could be vulnerable to configuration drift
 * Containerized Servers
+  * changes - building and deploying a new version of the container
+  * host servers could use either
+    * configuration synchronization 
+    * immutable server
 
 
 --
@@ -231,14 +326,27 @@ Errors changes are made visible quickly. <br />
 <!-- {_style="float: right"} -->
 
 * minimize server templates
+  * good for
+    * security
+    * performance
+    * stability
+    * troubleshooting
 * replace servers when the server template change
 * Phoenix servers
-<br /><br /><br /><br /><br />
+  * routinely replacing server
+  * maximum lifespan
+<br /><br /><br />
 
 
 Source: Infrastructure as Code
 
 <!-- {_style="text-align: right; font-size:60%"} -->
+
+Note:
+*minimize server templates* - The less you have on your servers to start with, the less you need to manage afterward.
+*replace servers when the server template change* - 
+*Phoenix servers* - 
+
 
 
 --
@@ -252,6 +360,9 @@ Source: Infrastructure as Code
 
 <!-- {_style="text-align: right; font-size:60%"} -->
 
+Note:
+*materless* - improve stability, uptime, and scalabilit, definitions still need to be downloaded
+
 
 --
 ## Immutable Servers
@@ -264,6 +375,9 @@ Source: Infrastructure as Code
 Source: Infrastructure as Code
 
 <!-- {_style="text-align: right; font-size:60%"} -->
+
+Note:
+Once a server template is created and tested, there is a smaller chance for untested changes and variation to happen on a production server.
 
 
 ---
