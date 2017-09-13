@@ -268,3 +268,133 @@ Source: Infrastructure as Code
 
 ---
 ## Patterns for defining infrastructure
+* provision and configure larger groups of infrastructure elements
+* group in to a **Stack**
+  * collection of infrastructure elements that are defined as a unit
+  * can be any size
+    * a single server
+    * a pool of servers
+    * an entire data center
+  * defined and changed as a unit
+* environments
+  * development
+  * test
+  * preproduction
+  * production
+
+
+--
+## Infrastructure Stacks as Code
+![A simple environment](../images/l03-simple-stack.png)
+
+<!-- {_style="float: right; padding-left: 200px"} -->
+```nginx
+resource "aws_instance" "web_server_1" { 
+  ami = "ami-47a23a30"
+  instance_type = "t2.micro"
+}
+resource "aws_instance" "web_server_2" { 
+  ami = "ami-47a23a30"
+  instance_type = "t2.micro"
+}
+resource "aws_elb" "web_load_balancer" {
+  name = "weblb"
+  listener {
+    instance_port = 80
+    instance_protocol = "http"
+    lb_port = 80
+    lb_protocol = "http"
+  }
+  instances = [
+      "${aws_instance.web_server_1.id}",
+      "${aws_instance.web_server_2.id}"
+    ]
+  security_groups = ["${aws_security_group.web_firewall.id}"]
+}
+resource "aws_security_group" "web_firewall" {
+  name = "web_firewall"
+  ingress {
+    from_port = 80
+    to_port = 80
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+```
+<!-- {_style="font-size:25%"} -->
+
+* Webserver cluster with frontend networking
+* Terraform for AWS
+
+Source: Infrastructure as Code
+<!-- {_style="text-align: right; font-size:60%"} -->
+
+
+--
+## Infrastructure Stacks as Code
+```nginx
+variable "environment" {}
+resource "aws_instance" "web_server_1" { 
+  ami = "ami-47a23a30"
+  instance_type = "t2.micro"
+  tags {
+    Name = "Web Server 1"
+    Environment = "${var.environment}"
+  }
+}
+resource "aws_instance" "web_server_2" { 
+  ami = "ami-47a23a30"
+  instance_type = "t2.micro"
+  tags {
+    Name = "Web Server 2"
+    Environment = "${var.environment}"
+  }
+}
+```
+<!-- {_style="font-size:40%; float: right; width: 40%"} -->
+* Per-Environment Definition Files - Antipattern
+* Reusable Definition Files
+  * First for QA:
+```bash
+$ terraform apply -state=qa-env.tfstate -var environment=qa
+```
+<!-- {_style="font-size:50%"} -->
+  * Then the tool is run again for PROD:
+```bash
+$ terraform apply -state=prod-env.tfstate -var environment=prod
+```
+<!-- {_style="font-size:50%"} -->
+
+
+--
+## Organizing Infrastructure
+
+![A Monolithic Stack](../images/l03-monolithic-environment.png)
+
+<!-- {_style="width:38%; float: right;"} -->
+Monolithic Stack - Antipattern
+* easy for a small change to break many things
+* hard to avoid tight coupling between the parts of the infrastructure
+* each instance of the environment is large and expensive
+* changes requires testing an entire stack at once
+* difficult to delegate and divide responsibilities 
+
+<!-- {_style="font-size:65%"} -->
+
+
+
+--
+## Organizing Infrastructure
+
+* dividing into Multiple Stacks
+  * each tier to be changed independently
+  * stacks have interdependencies
+* sharing infrastructure elements
+  * cost effective
+  * less flexible
+
+
+
+![A Monolithic Stack](../images/l03-multiple-stacks.png)
+
+<!-- {_style="width:50%; float: right;"} -->
