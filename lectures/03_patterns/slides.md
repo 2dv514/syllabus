@@ -352,7 +352,7 @@ Note:
 --
 ## Continuous Configuration
 * push or pull to synchronize
-* materless configuration management 
+* masterless configuration management 
 * server configuration tool to continuously synchronize configuration 
 ![Using the same configuration tool across the server lifecycle](../images/l03-configuration-tool-across-the-server-lifecycle.png)
 
@@ -361,7 +361,7 @@ Source: Infrastructure as Code
 <!-- {_style="text-align: right; font-size:60%"} -->
 
 Note:
-*materless* - improve stability, uptime, and scalabilit, definitions still need to be downloaded
+*masterless* - improve stability, uptime, and scalabilit, definitions still need to be downloaded
 
 
 --

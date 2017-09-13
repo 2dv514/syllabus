@@ -44,8 +44,9 @@ Chapter 2-5 in Morris
 
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/03_patterns/index.html#/)
-- [Recording 2017-09-13, 13.15 (Youtube)](#)
+- [Recording 2017-09-13, 13.15 (Youtube)](https://youtu.be/3p6GTyH-N-k?t=14m55s&t=13m46s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
 <br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3p6GTyH-N-k?t=14m55s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
 
 ### Resources
 Chapter 6-9 in Morris
