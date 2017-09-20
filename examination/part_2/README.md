@@ -15,7 +15,7 @@ The first thing to think about is to create the software. You are all familiar t
 ![Image of the software architecture](./ms-architecture.png)
 
 
-As you can see from the image above we have the two services, the API gateway and a client (you should provide the web server it is loading from). We try to keep the code to a minimum just to get a proof of concept but of course you are free to fill the services with more data to better test the system. In this text we describe the bare minimum. Even if the services in this "proof of concept-senario" doesn´t need datastorage in databases you should provide and store the data responded to the client (eg. your software should communicate with the database). You are free to chose database (mySQL, mongoDB, redis...)
+As you can see from the image above we have the two services, the API gateway and a client (you should provide the web server it is loading from). We try to keep the code to a minimum just to get a proof of concept but of course you are free to fill the services with more data to better test the system. In this text we describe the bare minimum. Even if the services in this "proof of concept-scenario" doesn't´t need data storage in databases you should provide and store the data responded to the client (eg. your software should communicate with the database). You are free to chose database (mySQL, mongoDB, redis...)
 
 The both services could just have one API method. The method will take a HTTP GET and respond with some JSON data. For example:
 
@@ -52,7 +52,6 @@ One of the things is that your infrastructure code should be self-documenting. B
 ###Case experimenting
 There are some cases that you should try out in your infrastructure solution.
 
-#### Changeability
 
 **How does your system handle changeability?** If we want do upgrade the version of some of the application platforms how will it work? How will security updates be handle? Try to describe and perform a scenario and how your solution is handling this.
 
@@ -62,10 +61,21 @@ There are some cases that you should try out in your infrastructure solution.
 
 **Environments** Describe how you could work with your infrastructures when deploying it in different Environments (develop, staging, QA and so on). How do you work with environment variables.
 
-###Group reflection
-The group should reflect over what went good in the project and what went bad. What should you have done different if you got the chance.
+
+### Individual diary and reflection
+Every single student should send a individual work diary describing how many hours and what that student have worked in the project. The diary should give the examinator a quick and simple guidance to what you have done in the project.
+
+You should also provide a text answering the following questions:
+* What have you learned from this project?
+* What has gone good and what has gone bad in the project?
+* What will you do different next time?
+
+This should be sent to the course e-mail before deadline.
 
 ## Iterative meetings
 During the project the group will have meetings with the course management. There are several pass booked into the course schedule. This meetings are mandatory. Your group decides which of you that will participate in the meetings (all or just one person) but some should always be there.
 
 During this meeting should you describe what you have done, how you have separated the work and how you will work until the next meeting. Try to keep these meetings effective and be prepared. For example; you want to talk about your infrastructure, then make sure you have an image over it so there will be no problem to understand each other.
+
+## Remember
+As said before this could be a pretty big project with many technologies. Therefore you must be effective when split the work between team members. Maybe take different roles where some is responsible for the software, some starts learning and test the configuration management tool and so on.
