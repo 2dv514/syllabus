@@ -12,7 +12,7 @@ They have given your group the assignment to bring up a proof of concept of drif
 ## Part 1 - The software architecture
 The first thing to think about is to create the software. You are all familiar to the microservice architecture and it's pros and cons. You are going to create a very small example of this architecture. The software includes at least two services (with own data management) and a [API Gateway](http://microservices.io/patterns/apigateway.html).
 
-![Image of the software architecture](./ms-architecture.png)
+![Image of the software architecture](https://github.com/2dv514/syllabus/raw/master/examination/part_2/ms-architecture.png)
 
 
 As you can see from the image above we have the two services, the API gateway and a client (you should provide the web server it is loading from). We try to keep the code to a minimum just to get a proof of concept but of course you are free to fill the services with more data to better test the system. In this text we describe the bare minimum. Even if the services in this "proof of concept-scenario" doesn't´t need data storage in databases you should provide and store the data responded to the client (eg. your software should communicate with the database). You are free to chose database (mySQL, mongoDB, redis...)
