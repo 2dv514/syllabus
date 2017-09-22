@@ -42,14 +42,14 @@ The group should discuss this matters and provide a image of the infrastructure 
 Of course the infrastructure should be handle with the mindset of DevOps and "Infrastructure as Code". You should use a configuration management tool and all of the infrastructure specific code should be version managed in a git repository provided by the course management. This repository will be part of the examination.
 
 ## Monitoring your infrastructure
-To be...
+Will be avalible after the lecture about monitoring.
 
 ## Examination
 One of the things is that your infrastructure code should be self-documenting. But for the examination your group should provide a project report. The report could be in pdf or as a wiki in your GitHub repository. The following part are mandatory to be included in the report:
 
-###The members of the group, name, emails
-###Introduction - describing the assignmet
-###Case experimenting
+### The members of the group, name, emails
+### Introduction - describing the assignmet
+### Case experimenting
 There are some cases that you should try out in your infrastructure solution.
 
 
