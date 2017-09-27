@@ -2,10 +2,15 @@
 
 * Some content will also be accessed in 2DV611, Continuous Delivery
 * Software Engineering Practices for infrastructure
+  * System quality
+  * VCS for infrastructure
+    * Branching
+    * Handling features/changes
 * Testing the infrastructure
-* Change Management pipeline (very shortly)
-* Availability
-* When things go wrong
+  * Test pyramid
+  * Operational qualities
+* Continuous availability
+* Prepare for **when** things go wrong
 
 
 ---
@@ -75,7 +80,7 @@ Note: uncomet tests, timepressure...
 * Delivering complex systems in an agile way
   * Break down into smaller changes (can´t always be done)
   * Slowly replaces old system
-* Keep changes hidden from users
+* Keep changes hidden in production
   * Parallel systems, old and new
     * Feature hiding - Deploy but don´t let users or system use the features - When functionality isn´t completed and fully tested.
     * **Feature toggles** - Implement configuration setting to toggle feature on and off (for different environments, for different users, for different system components)
@@ -176,15 +181,17 @@ Source: Infrastructure as Code
   * Could affect software designed (some architectures assume static infrastructure)
     * Stateful sessions, local data storing, static configuration
     * Cloud-native software (page 279 - Morris)- [12-factor applications](https://12factor.net/)
+* Data Continuity
 
 
 ---
 ## Patterns for Zero-Downtime
 * Blue-Green replacement
 * Phoenix replacement
+  * Impractical on bigger infrastructures
+    * Sub-sections, loosely coupled services
 * Canary replacement
-* Impractical on bigger infrastructures
-  * Sub-sections, loosely coupled services
+
 
 
 --
@@ -203,7 +210,7 @@ Source: Infrastructure as Code
 
 --
 ## Phoenix Replacement
-* A new instance is created when a change is made
+* A new instance of infrastructure is created when a change is made
   * Don´t need two parallel running instances all the time
 * Create the new, testing, switch to it
   * Keeping the old one until the new proven in use.
