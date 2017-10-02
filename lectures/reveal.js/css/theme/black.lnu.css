@@ -241,3 +241,11 @@ pre.lnu-code {
 .chart-input:focus {
   outline: none !important;
 }
+strong>em,
+em>strong,
+b>i,
+i>b {
+    font-style:normal;
+    font-weight:normal;
+    text-decoration:underline;
+}
