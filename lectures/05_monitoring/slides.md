@@ -183,6 +183,7 @@ Note:
 **Pull** means an agent polls the object being monitored and requests the data and stores it. <br>
 Collectors can work in several different ways.
 
+
 --
 ![The components of a monitoring system](../images/l05-components-of-a-monitoring-system-analysis.png)
 <!-- {_style="position: absolute; top: 20px; right: 0px; width:25%;"} -->
