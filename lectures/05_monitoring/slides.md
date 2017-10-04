@@ -1,5 +1,4 @@
 # Monitoring
-
 * Overview
 * Core concepts
 * Tools
