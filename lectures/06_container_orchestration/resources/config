@@ -1,0 +1,19 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority: /Users/tlija/Dropbox (Lindehoff)/Jobb/LNU/Kurser/2017/2DV514_Configuration_management/syllabus/lectures/06_container_orchestration/resources/ca.pem
+    server: https://194.47.164.27:6443
+  name: k8s-cluster
+contexts:
+- context:
+    cluster: k8s-cluster
+    user: k8s-cluster
+  name: k8s-cluster
+current-context: k8s-cluster
+kind: Config
+preferences: {}
+users:
+- name: k8s-cluster
+  user:
+    client-certificate: /Users/tlija/Dropbox (Lindehoff)/Jobb/LNU/Kurser/2017/2DV514_Configuration_management/syllabus/lectures/06_container_orchestration/resources/cert.pem
+    client-key: /Users/tlija/Dropbox (Lindehoff)/Jobb/LNU/Kurser/2017/2DV514_Configuration_management/syllabus/lectures/06_container_orchestration/resources/key.pem
