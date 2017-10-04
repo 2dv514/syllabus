@@ -46,6 +46,13 @@ Terms to Know
 * **Metric** -  measurement with a name and timestamp
   - `dataprocessing:server2.acme.com:total-request-count@20170930T111900Z = 12465`
 
+Note:
+**dataprocessing** = server <br />
+**server2.acme.com** = machine <br />
+**total-request-count** = measurement <br />
+**20170930T111900Z** = timestamp <br />
+**12465** = measurement value <br />
+
 
 --
 ## Core concepts - Metric
@@ -59,7 +66,7 @@ Terms to Know
   hostname,                   process,      vhost,            name
   ```
 * Metric values (overlapping)
-  - Counters, Gauges, Percentiles... Nominal, Ordinal, Interval, Ratio... Derived...
+  - Counters, Gauges, Percentiles, Nominal, Ordinal, Interval, Ratio...
 * Timestamped
 
 ```
@@ -151,6 +158,14 @@ Source: The Practice of Cloud System Administration
 
 <!-- {_style="text-align: right; font-size:60%"} -->
 
+Note:
+**Blackbox** monitoring means that measurements try to emulate a user.<br/>
+**Whitebox** measurement has the benefit of internal knowledge because it is a lower level of abstraction<br/>
+**Synthesized metric** collects info every x minutes<br>
+**Rate metrics** are more important when event frequency is high and there are smooth<br>
+**Gauge** (mätare) value is an amount that varies<br>
+**Counter** (räknare) is a measurement that only increases
+
 
 --
 ![The components of a monitoring system](../images/l05-components-of-a-monitoring-system-collection.png)
@@ -163,6 +178,10 @@ Collection
 * Push vs. Pull
 * Server Component vs. Agent vs. Poller
 
+Note:
+**Push** means the sensor that took the measurement transmits it to the collection mechanism. <br>
+**Pull** means an agent polls the object being monitored and requests the data and stores it. <br>
+Collectors can work in several different ways.
 
 --
 ![The components of a monitoring system](../images/l05-components-of-a-monitoring-system-analysis.png)
@@ -178,6 +197,12 @@ Analysis and Computation
 Source: The Practice of Cloud System Administration
 
 <!-- {_style="text-align: right; font-size:60%"} -->
+
+Note:
+**Real-time**: computationally expensive analysis and is reserved for critical tasks<br />
+**Short-term**: examines data that was collected in the last day, week<br />
+**Long-term**: generating and storing summaries of data (averages, aggregates). analysis requires a large amount of processing<br />
+**Anomaly detection**: determination that a specific measurement is not within expectations<br />
 
 
 --
@@ -198,6 +223,11 @@ Alerting and Escalation
 Source: The Practice of Cloud System Administration
 
 <!-- {_style="text-align: right; font-size:60%"} -->
+
+Note:
+Scheduled maintenance<br>
+**Silence** alerts still trigger but no action is taken<br>
+**Inhibit** the alert does not trigger and as a result no alerts are sent.<br>
 
 
 --
@@ -323,7 +353,7 @@ Multi Router Traffic Grapher
   - Centralized scraping
   - Support for forwarding metrics
 * **Analysis**: At sensing time
-* **Alerting**: Configurable alarms and emails
+* **Alerting**: Configurable alarms
 * **Visualization**: 
   - Basic graphs of check results 
   - Dependency chains
