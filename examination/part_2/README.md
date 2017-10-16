@@ -42,7 +42,14 @@ The group should discuss this matters and provide a image of the infrastructure 
 Of course the infrastructure should be handle with the mindset of DevOps and "Infrastructure as Code". You should use a configuration management tool and all of the infrastructure specific code should be version managed in a git repository provided by the course management. This repository will be part of the examination.
 
 ## Monitoring your infrastructure
-Will be avalible after the lecture about monitoring.
+You can spend a lot of time setting up the perfect monitoring solution for your system. Since you do not have unlimited time to do this you will have to prioritize.
+Your monitoring solution should at least implement the following:
+
+* monitor availability for some services in your system
+* the metrics should be stored in some way
+* some visualization of the services availability
+* if one of the monitored services becomes unavailable some one should be notified
+
 
 ## Examination
 One of the things is that your infrastructure code should be self-documenting. But for the examination your group should provide a project report. The report could be in pdf or as a wiki in your GitHub repository. The following part are mandatory to be included in the report:
