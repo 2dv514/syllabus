@@ -1,27 +1,30 @@
-magnum cluster-template-create k8s-cluster-template \
-    --image 25341c5e-9c0c-43bf-b92c-3ce6d009e4d4 \
-    --external-network internetlan \
-    --dns-nameserver 194.47.199.41 \
-    --flavor 12020 \
-    --master-flavor 12020 \
+
+imageId=$(openstack image list | grep "Fedora Atomic 26" |  awk '{print $2}')
+magnum cluster-template-create k8s-template \
+    --image $imageId \
+    --external-network public \
+    --flavor cpu1-ram2048-disk20 \
+    --master-flavor cpu1-ram2048-disk20 \
     --docker-volume-size 5 \
     --network-driver flannel \
     --volume-driver cinder \
     --coe kubernetes 
-magnum cluster-create k8s-cluster \
-    --cluster-template k8s-cluster-template \
+magnum cluster-create k8s-cluster01 \
+    --cluster-template k8s-template \
     --master-count 1 \
-    --node-count 2 \
-    --keypair mykey
+    --node-count 3 \
+    --keypair tlija-key
 
 ID=$(cinder create --display-name=demo-mongodb 1 | awk -F'|' '$2~/^[[:space:]]*id/ {print $3}')
 
 kubectl create -f k8-node-mongo/mongo-controller.yaml
+kubectl create -f k8-node-mongo/mongo-service.yaml
+kubectl create -f k8-node-mongo/web-controller-demo.yaml
+kubectl create -f k8-node-mongo/web-service.yaml
 
-neutron floatingip-create internetlan
-FLOATING_ID=$(neutron floatingip-list | grep "194.47.164.26" | awk '{print $2}')
+FLOATING_ID=$(openstack floating ip create public -f value -c id)
 neutron lbaas-loadbalancer-list
-PORT_ID=$(neutron lbaas-loadbalancer-show 22fe2af5-d13f-42ff-9aa1-f1a954e5c11e | grep vip_port_id  | awk '{print $4}')
+PORT_ID=$(neutron lbaas-loadbalancer-show a205ccb8-17d5-4024-8a68-522c6f65f95a | grep vip_port_id  | awk '{print $4}')
 neutron floatingip-associate $FLOATING_ID $PORT_ID
 
 neutron security-group-create lb-web

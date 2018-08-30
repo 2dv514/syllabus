@@ -9,7 +9,7 @@
     </thead>
     <tbody>
         <tr>
-            <td style="vertical-align: top;">w35</td>
+            <td style="vertical-align: top;">w36</td>
             <td>
                 <ul>
                     <li>Lecture 00 – Course Introduction   </li>
@@ -20,7 +20,7 @@
             </td>
         </tr>
         <tr>
-            <td style="vertical-align: top;">w36</td>
+            <td style="vertical-align: top;">w37</td>
             <td>
                 <ul>
                     <li>Lecture 02 - Configuration management tools</li>
@@ -29,7 +29,7 @@
             </td>
         </tr>
         <tr>
-            <td style="vertical-align: top;">w37</td>
+            <td style="vertical-align: top;">w38</td>
             <td>
                 <ul>
                     <li>Lecture 03 - Patterns</li>
@@ -38,15 +38,15 @@
             </td>
         </tr>
       <tr>
-          <td style="vertical-align: top;">w38</td>
+          <td style="vertical-align: top;">w39</td>
           <td>
               <ul>
-                  <li><strong>10.00am September 22th – Deadline</strong> handling in Assignment</li>
+                  <li><strong>10.00am September 28th – Deadline</strong> handling in Assignment</li>
               </ul>
           </td>
       </tr>
       <tr>
-          <td style="vertical-align: top;">w39</td>
+          <td style="vertical-align: top;">w40</td>
           <td>
               <ul>
                 <li>Lecture 04 - Practices</li>
@@ -56,7 +56,7 @@
           </td>
       </tr>
       <tr>
-          <td style="vertical-align: top;">w40</td>
+          <td style="vertical-align: top;">w41</td>
           <td>
               <ul>
                 <li>Lecture 05 - Monitoring</li>
@@ -66,14 +66,6 @@
           </td>
       </tr>
       <tr>
-          <td style="vertical-align: top;">w41</td>
-          <td>
-              <ul>
-                <li>Group Project</li>
-                <li>Tutoring Tuesdays and Thursdays</li>
-              </ul>
-          </td>
-      </tr>
           <td style="vertical-align: top;">w42</td>
           <td>
               <ul>
@@ -82,11 +74,19 @@
               </ul>
           </td>
       </tr>
-      <tr>
           <td style="vertical-align: top;">w43</td>
           <td>
               <ul>
-                  <li><strong>October 25th - Deadline</strong> oral hearing</li>
+                <li>Group Project</li>
+                <li>Tutoring Tuesdays and Thursdays</li>
+              </ul>
+          </td>
+      </tr>
+      <tr>
+          <td style="vertical-align: top;">w44</td>
+          <td>
+              <ul>
+                  <li><strong>October 31 - Deadline</strong> oral hearing</li>
               </ul>
           </td>
       </tr>
