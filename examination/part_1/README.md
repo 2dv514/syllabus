@@ -22,10 +22,4 @@ Try to have an idea how you structure your report so it will be easy to read and
 
 We have not set a minimum requirements for this assigment so we expect that you are experience enough to hold it within a reasonable number of pages.
 
-## Part 2 - Nearby questions
-* Describe how you think the DevOps movement changes and will change the software development area.
-* Explain (in a paragraph or two) what the following tools do and the difference between them:
-    * Kubernetes
-    * Docker Swarm
-    * Docker Compose
     
