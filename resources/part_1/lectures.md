@@ -7,7 +7,7 @@
     * Wider definition
     * Our focus
     * Infrastructure As Code
-duxvJXAldNA&index=2&list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t
+
 ### Presentation
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/01_course_definitions/index.html#/)
 - [Recording 2017-08-30, 13.15 (Youtube)](https://youtu.be/duxvJXAldNA?list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t)
