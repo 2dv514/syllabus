@@ -6,16 +6,19 @@ This is a course introduction that covers the following:
   * Part 2 - Group Assignment 
 * Week Plan
 * Literature
+* Last years course evaluation
 
 
 ## Keywords
 Course introduction
 
+<!--
 ## Resources
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/00_course-introduction/index.html)
-
-<!--
-- [Recording 2018-09-05, 13.15 (Youtube)](https://youtu.be/TcDamvwNpwU?list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t)
-<br />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TcDamvwNpwU?list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t" frameborder="0" allowfullscreen></iframe>
 -->
+
+
+- [Recording 2018-09-05, (Youtube)](https://youtu.be/a-4ogyC71uU)
+<br />
+<iframe width="560" height="315" src="https://www.youtube.com/embed/a-4ogyC71uU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
