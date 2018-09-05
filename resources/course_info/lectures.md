@@ -13,6 +13,9 @@ Course introduction
 
 ## Resources
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/00_course-introduction/index.html)
-- [Recording 2017-08-30, 13.15 (Youtube)](https://youtu.be/TcDamvwNpwU?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
+
+<!--
+- [Recording 2018-09-05, 13.15 (Youtube)](https://youtu.be/TcDamvwNpwU?list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t)
 <br />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TcDamvwNpwU?list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TcDamvwNpwU?list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t" frameborder="0" allowfullscreen></iframe>
+-->
