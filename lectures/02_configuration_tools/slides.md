@@ -8,13 +8,6 @@
 --
 ![confuse](../images/confusion.png)
 
-
---
-<div class="center">
-![What](../images/how.gif)
-</div>
-
-
 ---
 ## Some words
 
@@ -24,12 +17,11 @@
 * Orchestration
   * Arranging or coordinating multiple systems
   * Provisioning many servers at once
-  * Running same task on many servers at once
-  * Setting up a Dynamic Infrastructure Platform
+    * Running same task on many servers at once
   * Automate tasks and orchestrate processes
 * Configuration Management
-  * Part of Provisioning
-  * Configure your server repeatedly, consistently, transparent...
+  * Practices for handling provisioning and orchestration
+  * Configure your server or infrastructure repeatedly, consistently, transparent...
 
 
 ---
@@ -37,18 +29,17 @@
 
 
 ---
-## Dynamic Infrastructure tools
+## Dynamic Infrastructure platform
 
-* Public/Private IaaS, Community IaaS...
+* public/private IaaS, community IaaS...
   * Cloud formation (AWS), Terraform, OpenStack (Heat)
-  * On-demand
-  * Create and destroy immediately (Minutes at the most!)
-  * Self-Service
-* Specifying what infrastructure resources should be allocated  
-* Configuration files describe the components needed to run a single application or your entire datacenter.
+  * Must be programmable, on-demand, self-service
+    * Having programmable interfaces
+    * Create and destroy immediately
+    * Be able to customize your given resources
 * May create servers but is not responsible on whats on them (but could be)
 * May pass configuration info to a server configuration tool (network addresses)
-
+* This is a requirement for Infrastructure As Code
 (Morris - chapter 2, Should be recap)
 
 
@@ -61,7 +52,6 @@
     * CLI that is easy to script
     * Take input from other tools (stdin, environment variables, command-line parameters)
     * Output should be able to be used by other tools
-    * Like a Unix CLI
   - Support for unattended execution
     * No manual steps in the scripts, avoid Ad Hoc solutions
     * Triggable scripts, notifications
@@ -108,19 +98,8 @@ Source: The practice of cloud system administration
   * Parameterized
   * Big complex system, many script files, hard to manage, API versioning  
 
-
-
---
-## Back to the main story
-
-<!-- {_class="center"} -->
-![mainstory](../images/mainstory.jpg)
-
-<!-- {_class="center"} -->
-
-
 ---
-## How to configure our servers...
+## Server configuration...
 
   ...in a dynamic infrastructure
 
@@ -134,12 +113,14 @@ Source: The practice of cloud system administration
      - Out of state with notify the systems
      - Using modern configuration tools
      - Using Domain-specific languages (DSL) instead of script
-     - Self-documention
+     - Self-documentation
 
 
 
 --
-## Server change management models
+## Server change
+
+...with
 
 * Configuration synchronization
  * hourly schedules
@@ -154,7 +135,7 @@ Source: The practice of cloud system administration
 --
 ## Server configuration tools
   * Create, provision and update servers - new generation tools
-    * Ansible, Chef, Puppet, Salt(Stack)
+    * Ansible, Chef, Puppet
   * Configuration enforcement
     * Desired state (not step-by-step), prevent configuration drift
   * Enables collaboration
@@ -186,7 +167,6 @@ user "EllenNu"
 ```
 * Declarative vs imperative
   * First do X, then do Y vs. should be Z
-  * Clarity, easy to debug
   * Using predefined libraries (working over many platforms)
   * Easy to reuse over different environments - Use parameters
 
@@ -208,7 +188,7 @@ user "EllenNu"
 --
 ## Puppet
 * Created in 2005
-* Open Source, built on top of Ruby
+* Open Source (GNU General Public License), built on top of Ruby
 * Writing modules and manifests
 
 ```Ruby
@@ -226,13 +206,11 @@ node 'host2' {
 --
 ## Chef
 * Created in 2008
-* Open source, mostly Ruby
-* Written by developers from Puppet
+* Open source (Apache License 2.0), mostly Ruby
 * Writing cookbook and recipes
 
 ```Ruby
 include_recipe "apache2"
-include_recipe "mysql::client"
 include_recipe "mysql::server"
 include_recipe "php"
 include_recipe "php::module_mysql"
@@ -248,14 +226,14 @@ end
 --
 ## Ansible
 * Created in 2012
-* SSH keys
-* Playbooks, using YAML-configurations
+* Open source (GNU General Public License)
+* Playbooks, roles, using YAML-configurations, SSH
 
 ```YAML
 - hosts: webservers
   vars:
     http_port: 80
-  remote_user: root
+  become_user: root
   tasks:
   - name: ensure apache is at the latest version
     yum: name=httpd state=latest
@@ -279,6 +257,9 @@ end
 * A couple of pages per technique
 * Think about one of these you want to use to set up a system in the project assignment
 
+
+---
+## Quick demo
 
 ---
 <br><br>
