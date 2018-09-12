@@ -8,6 +8,7 @@
 --
 ![confuse](../images/confusion.png)
 
+
 ---
 ## Some words
 
@@ -98,6 +99,7 @@ Source: The practice of cloud system administration
   * Parameterized
   * Big complex system, many script files, hard to manage, API versioning  
 
+
 ---
 ## Server configuration...
 
@@ -118,9 +120,7 @@ Source: The practice of cloud system administration
 
 
 --
-## Server change
-
-...with
+## Server updates...
 
 * Configuration synchronization
  * hourly schedules
@@ -260,6 +260,7 @@ end
 
 ---
 ## Quick demo
+
 
 ---
 <br><br>
