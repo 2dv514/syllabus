@@ -27,12 +27,10 @@
 
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/02_configuration_tools/index.html#/)
-
-<!--
-- [Recording 2017-09-06, 13.15 (Youtube)](https://youtu.be/qfWyeMokBPE?t=13m46s&list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t)
+- [Recording 2017-09-06, 13.15 (Youtube)](https://youtu.be/rRyP8Yvj-Mk?t=9m50s&list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t)
 <br />
-<iframe width="560" height="315" src="https://www.youtube.com/embed/qfWyeMokBPE?list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t" frameborder="0" allowfullscreen></iframe>
--->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rRyP8Yvj-Mk?t=9m50&list=PLSWJPPj5sKmrCW3jf_boNprmWDyl89owV&t" frameborder="0" allowfullscreen></iframe>
+
 
 ### Resources
 Chapter 2-5 in Morris
