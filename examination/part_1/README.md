@@ -28,4 +28,4 @@ We have not set a minimum requirements for this assignment so we expect that you
 ## Hand-in instructions
 * No later then **10.00am 28 of September**
 * The format should PDF
-* The report should be send to **2dv0512@lnu.se**
+* The report should be send to **2dv514@lnu.se**
