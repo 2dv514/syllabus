@@ -347,7 +347,7 @@ Errors changes are made visible quickly. <br />
     * configuration synchronization
     * immutable server
 
-<!-- {_style="font-size:80%"} -->
+<!-- {_style="font-size:70%"} -->
 
 
 --
@@ -365,7 +365,7 @@ Errors changes are made visible quickly. <br />
 * replace servers when the server template change
 * Phoenix servers
   * routinely replacing server
-  * maximum lifespan
+  * scheduled maximum lifespan
 <br /><br /><br />
 
 
@@ -383,7 +383,7 @@ Note:
 --
 ## Continuous Configuration
 * push or pull to synchronize
-* masterless configuration management 
+  * masterless configuration management 
 * server configuration tool to continuously synchronize configuration 
 ![Using the same configuration tool across the server lifecycle](../images/l03-configuration-tool-across-the-server-lifecycle.png)
 
