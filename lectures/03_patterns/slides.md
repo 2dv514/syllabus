@@ -347,6 +347,8 @@ Errors changes are made visible quickly. <br />
     * configuration synchronization
     * immutable server
 
+<!-- {_style="font-size:80%"} -->
+
 
 --
 ## General Patterns and Practices
