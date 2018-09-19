@@ -14,6 +14,9 @@
   * installation
   * configuration
   * registration
+* can be split up in parts
+  * base template
+  * custom installation and configuration
   
 Note:
 assigning resources - Name, ip, physical, virtual <br/>
@@ -33,10 +36,12 @@ Note:
 * Any **existing infrastructure element** can be effortlessly **rebuilt on demand**.<br/>
 * A **new element can be defined once**, and then rolled out and replicated to multiple instances and environments.<br/>
 * The **definition of any element**, and the process to provision it, is **transparent and easily modified**.
+	
+consistent - konsekvent, förenlig, överensstämmande, jämn
 
 
 --
-## Server´s lifecycle
+## Server´s lifecycle (traditionally)
 ![Server´s lifecycle](../images/l03-server-lifecycle.png)
 
 * Package a server template
@@ -181,6 +186,14 @@ Many OS vendors and cloud services provide prepackaged
     * services
     * configuration
 
+
+Building a server template<!-- {_style="position: absolute;top: 120px; left: 800px; font-size:50%"} -->
+1. **Selecting an origin image**
+2. Applying customizations to the image
+3. Packaging the image into a server template image
+
+<!-- {_style="position: absolute;top: 170px; left: 800px; font-size:40%"} -->
+
 Note:
 *Hot Cloned Server Template* - Templates should be created from a **clean server**, one that has never been used for any other purpose<br />
 *OS installation image* - provides a clean, **consistent starting point**, most IaaS cloud platforms **don’t** provide an easy way to **boot servers directly from an ISO** <br />
@@ -203,6 +216,14 @@ Note:
   * Provisioning in the Template
     * putting nearly everything into the server template
   * Mixed
+
+
+Building a server template<!-- {_style="position: absolute;top: 120px; left: 800px; font-size:50%"} -->
+1. Selecting an origin image
+2. **Applying customizations to the image**
+3. Packaging the image into a server template image
+
+<!-- {_style="position: absolute;top: 170px; left: 800px; font-size:40%"} -->
 
 
 --
@@ -239,7 +260,7 @@ Time to bake it into a server template
   ]
 }
 ```
-<!-- {_style="font-size:40%; float: right; width: 50%"} -->
+<!-- {_style="margin-top:100px; font-size:40%; float: right; width: 50%"} -->
 
 * saved into a format recognized by <br />
     your infrastructure:
@@ -251,6 +272,14 @@ Time to bake it into a server template
 <br /><br /><br /><br /><br />
 Sample Packer template for multiple platforms
 <!-- {_style="text-align: right; font-size:60%"} -->
+
+
+Building a server template<!-- {_style="position: absolute;top: 120px; left: 800px; font-size:50%"} -->
+1. Selecting an origin image
+2. Applying customizations to the image
+3. **Packaging the image into a server template image**
+
+<!-- {_style="position: absolute;top: 170px; left: 800px; font-size:40%"} -->
 
 
 --
