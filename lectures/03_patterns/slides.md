@@ -187,12 +187,12 @@ Many OS vendors and cloud services provide prepackaged
     * configuration
 
 
-Building a server template<!-- {_style="position: absolute;top: 120px; left: 800px; font-size:50%"} -->
+Building a server template<!-- {_style="position: absolute;top: 100px; left: 850px; font-size:50%"} -->
 1. **Selecting an origin image**
 2. Applying customizations to the image
 3. Packaging the image into a server template image
 
-<!-- {_style="position: absolute;top: 170px; left: 800px; font-size:40%"} -->
+<!-- {_style="position: absolute;top: 150px; left: 850px; font-size:40%"} -->
 
 Note:
 *Hot Cloned Server Template* - Templates should be created from a **clean server**, one that has never been used for any other purpose<br />
@@ -218,12 +218,12 @@ Note:
   * Mixed
 
 
-Building a server template<!-- {_style="position: absolute;top: 120px; left: 800px; font-size:50%"} -->
+Building a server template<!-- {_style="position: absolute;top: 100px; left: 850px; font-size:50%"} -->
 1. Selecting an origin image
 2. **Applying customizations to the image**
 3. Packaging the image into a server template image
 
-<!-- {_style="position: absolute;top: 170px; left: 800px; font-size:40%"} -->
+<!-- {_style="position: absolute;top: 150px; left: 850px; font-size:40%"} -->
 
 
 --
@@ -274,12 +274,12 @@ Sample Packer template for multiple platforms
 <!-- {_style="text-align: right; font-size:60%"} -->
 
 
-Building a server template<!-- {_style="position: absolute;top: 120px; left: 800px; font-size:50%"} -->
+Building a server template<!-- {_style="position: absolute;top: 100px; left: 850px; font-size:50%"} -->
 1. Selecting an origin image
 2. Applying customizations to the image
 3. **Packaging the image into a server template image**
 
-<!-- {_style="position: absolute;top: 170px; left: 800px; font-size:40%"} -->
+<!-- {_style="position: absolute;top: 150px; left: 850px; font-size:40%"} -->
 
 
 --
@@ -344,7 +344,7 @@ Errors changes are made visible quickly. <br />
 * Containerized Servers
   * changes - building and deploying a new version of the container
   * host servers could use either
-    * configuration synchronization 
+    * configuration synchronization
     * immutable server
 
 
