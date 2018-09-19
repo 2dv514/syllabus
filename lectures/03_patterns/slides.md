@@ -260,7 +260,7 @@ Time to bake it into a server template
   ]
 }
 ```
-<!-- {_style="margin-top:100px; font-size:40%; float: right; width: 50%"} -->
+<!-- {_style="margin-top:70px; font-size:40%; float: right; width: 50%"} -->
 
 * saved into a format recognized by <br />
     your infrastructure:
