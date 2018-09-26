@@ -3,45 +3,33 @@
 This text describes the second assignment in the course 2DV514. This assignment could seem pretty big but remember that it will be done in groups.
 
 
-
 ## The problem to solve
-The company  [ACME Corporation](https://en.wikipedia.org/wiki/Acme_Corporation) are in a new phase of their software developing. They are very interested in bringing in new tools and technology into their stack. The problem is that they want to test the technologies in a smaller example before bringing it to their own production environment.
+The company [ACME Corporation](https://en.wikipedia.org/wiki/Acme_Corporation) are having some problem with there website.
+After releasing new products last months there website have been receiving a lot more traffic. This has led to the site being slow and sometime unresponsive. The site is built around the CMS system [Wordpress](https://wordpress.org/download/) and today it's hosted on an singel server running all of the required tools like database, static files, WordPress etc.
+Another problem the company has with the website is how it is being configured. Two years ago they hade a hard drive crash and had to rebuild there infrastructure, they hade no automated configuration so they hade to rebuild it manually. During this process they realized that they had to fix this in the future.
 
-They have given your group the assignment to bring up a proof of concept of drifting a infrastructure supporting the DevOps mindset with configuration management and microservice software architecture. The task is to develop a very small microservice architecture and drift it into their OpenStack cloud using a configuration management tool of your choice. The solution should also provide a good use of version control system, tactics for handling changeability and a valued documentation.
+The company have given your group the assignment to fix these two problems. To be able to handle the load increase on the web site you must introduce a load balancer and to be able to do that you must separate the different services. You should redesign the infrastructure to support the DevOps mindset with configuration management. The task is move there old single instance solution to a scalable one hosted on their new OpenStack cloud using a configuration management tool. The solution should also provide a good use of version control system, tactics for handling changeability and a valued documentation.
 
-## Part 1 - The software architecture
-The first thing to think about is to create the software. You are all familiar to the microservice architecture and it's pros and cons. You are going to create a very small example of this architecture. The software includes at least two services (with own data management) and a [API Gateway](http://microservices.io/patterns/apigateway.html).
+## Part 1 - Splitting up the single instance Wordpress
+Before introducing a load balancer you need to know the different components of Wordpress.
+![Image of the software architecture](https://github.com/2dv514/syllabus/raw/master/examination/part_2/wordpress-architecture.png)
 
-![Image of the software architecture](https://github.com/2dv514/syllabus/raw/master/examination/part_2/ms-architecture.png)
+As shown inte the figure, Wordpress 3 main components:
 
+1. The Wordpress code base and the code for plug-ins - This runs on an web server with support for PHP and only changes when you update/upgrade Wordpress or one of the plugins.
+2. Database server, MySQL or MariaDB - This holds persistent data like user accounts, site pages, news, plugin data and so on.
+3. User files - Administrators of the site can upload images and other document to the plattform, these are usually stored on in a folder on the webserver. But when you want to scale the web servers you need to move the storage of these files to a central location, like a file server.
 
-As you can see from the image above we have the two services, the API gateway and a client (you should provide the web server it is loading from). We try to keep the code to a minimum just to get a proof of concept but of course you are free to fill the services with more data to better test the system. In this text we describe the bare minimum. Even if the services in this "proof of concept-scenario" doesn't´t need data storage in databases you should provide and store the data responded to the client (eg. your software should communicate with the database). You are free to chose database (mySQL, mongoDB, redis...)
-
-The both services could just have one API method. The method will take a HTTP GET and respond with some JSON data. For example:
-
-```javascript
-// request
-GET https://service-a.example.com/hello
-
-// response
-{
-  "servicename": "serviceA",
-  "message": "Service A says Hello!"
-}
-```
-Remember that you are free to provide more complex (and funnier) data if you want.
-The API gateways job is to combine the two services and put together their responses to a message available for the outside client.
-
-You are free to choose the application platform and database you want but you should at least use two different. If it is nodeJS, JAVA, PHP or an other platform it is up to your group to decide. The platform for the client and the Gateway API is also free of choice. You should of course host your code in a repository. As a group your are responsible for creating and maintaining these repos - **these will not be created by the course management.**
+The group needs to analyze and discuss the existing infrastructure and develop a new solution that supports ACME's new needs. During the first supervision meeting, see below), you will present your solution.
 
 ## Part 2 - The infrastructure
-Looking at the software architecture you will have to figure out how the infrastructure should look like. Which servers is needed? How to handle load balancing? Proxies? Scaling? Monitoring? DNS servers? Backup? How should the client application be hosted?
+When you have a clearer overview of the different components of the new design you will have to figure out how the infrastructure should look like. Which servers is needed? How to handle load balancing? Proxies? Scaling? Monitoring? DNS servers? Backup?
 
-The group should discuss this matters and provide a image of the infrastructure when have the supervision meetings (see below).
+The group should discuss this matters and provide a image of the infrastructure when having the second supervisor meeting, (see below).
 
 Of course the infrastructure should be handle with the mindset of DevOps and "Infrastructure as Code". You should use a configuration management tool and all of the infrastructure specific code should be version managed in a git repository provided by the course management. This repository will be part of the examination.
 
-## Monitoring your infrastructure
+## Part 3 - Monitoring your infrastructure
 You can spend a lot of time setting up the perfect monitoring solution for your system. Since you do not have unlimited time to do this you will have to prioritize.
 Your monitoring solution should at least implement the following:
 
@@ -49,7 +37,6 @@ Your monitoring solution should at least implement the following:
 * the metrics should be stored in some way
 * some visualization of the services availability
 * if one of the monitored services becomes unavailable some one should be notified
-
 
 ## Examination
 One of the things is that your infrastructure code should be self-documenting. But for the examination your group should provide a project report. The report could be in pdf or as a wiki in your GitHub repository. The following part are mandatory to be included in the report:
@@ -73,16 +60,23 @@ There are some cases that you should try out in your infrastructure solution.
 Every single student should send a individual work diary describing how many hours and what that student have worked in the project. The diary should give the examinator a quick and simple guidance to what you have done in the project.
 
 You should also provide a text answering the following questions:
+
 * What have you learned from this project?
 * What has gone good and what has gone bad in the project?
 * What will you do different next time?
 
 This should be sent to the course e-mail before deadline.
 
-## Iterative meetings
+## Iterative meetings - Supervisor meetings
 During the project the group will have meetings with the course management. There are several pass booked into the course schedule. This meetings are mandatory. Your group decides which of you that will participate in the meetings (all or just one person) but some should always be there.
 
-During this meeting should you describe what you have done, how you have separated the work and how you will work until the next meeting. Try to keep these meetings effective and be prepared. For example; you want to talk about your infrastructure, then make sure you have an image over it so there will be no problem to understand each other.
+During this meetings you should describe what you have done, how you have separated the work and how you will work until the next meeting. Try to keep these meetings effective and be prepared. For example; you want to talk about your infrastructure, then make sure you have an image over it so there will be no problem to understand each other.
+
+Some meeting have pre-defiend topics that should be prepared in advanced:
+
+* Meeting 1 - see Part 1
+* Meeting 2 - an image overview of the new infrastructure
+* ...
 
 ## Remember
 As said before this could be a pretty big project with many technologies. Therefore you must be effective when split the work between team members. Maybe take different roles where some is responsible for the software, some starts learning and test the configuration management tool and so on.
