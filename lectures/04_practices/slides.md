@@ -14,7 +14,7 @@
 
 
 ---
-## Software Engineering Practices for infrastructure
+#### Software Engineering Practices for infrastructure
 * Chapter 10
 * Use proven tools and technics can be used to build quality in the system
   * Start delivering working, useful code fast
@@ -26,7 +26,7 @@
 
 
 --
-## What is system quality?
+#### What is system quality?
 
 > The true measure of the quality of a system, and its code, is how quickly and safely changes are made to it
 
@@ -41,7 +41,7 @@ Minimal documentation
 
 
 --
-## CI and CD for infrastructure
+#### CI and CD for infrastructure
 
 * Continuous testing changes made to definition files, scripts and other configuration files written for the infrastructure.
   * Managed by the VCS
@@ -57,7 +57,7 @@ Note: Looked down - security levels
 
 
 --
-## VCS for infrastructure
+#### VCS for infrastructure
 
 * Everything but artifacts that can be build from the code already in the VCS repository, data, log files, passwords, security secrets.
 * Branching (common techniques)
@@ -76,7 +76,7 @@ Note: uncomet tests, timepressure...
 
 
 --
-## Managing major infrastructure features
+#### Managing major infrastructure features
 * Delivering complex systems in an agile way
   * Break down into smaller changes (can´t always be done)
   * Slowly replaces old system
@@ -88,7 +88,7 @@ Note: uncomet tests, timepressure...
 
 
 ---
-## Testing your infrastructure
+#### Testing your infrastructure
 
 * Agile approach to testing, TDD, Automated testing for fast feedback
 * Test pyramid
@@ -106,7 +106,7 @@ Source: Infrastructure as Code
 
 
 --
-## Low-level testing
+#### Low-level testing
 
   * Syntax checking
     * checking syntax of a Ansible playbook
@@ -118,7 +118,7 @@ Source: Infrastructure as Code
 
 
 --
-## Middle-level testing
+#### Middle-level testing
 * Building templates, create instance and validate it is running by running some tests
   * OS-level checks
 * Should not test individual components. Making servers ready to integrate
@@ -131,7 +131,7 @@ Source: Infrastructure as Code
 
 
 --
-## High-level testing
+#### High-level testing
 * Testing multiple elements of infrastructure so that they work when integrated
 * Testing integrating external systems
 * Should using the same structure and tooling as in production
@@ -140,7 +140,7 @@ Source: Infrastructure as Code
 
 
 --
-## Testing operational Quality
+#### Testing operational quality
 * Performance, availability, security...
   * Defining targets and thresholds
   * Performance tests
@@ -153,7 +153,7 @@ Source: Infrastructure as Code
 
 
 --
-## Configuration management tools and testing
+#### Configuration management tools and testing
 
 * [Ansible-lint](https://github.com/willthames/ansible-lint), [Puppet-lint](http://puppet-lint.com/), [foodcritic](http://www.foodcritic.io/) [RuboCop](https://github.com/bbatsov/rubocop)
 * [Unit test - Ansible](http://docs.ansible.com/ansible/latest/dev_guide/testing_units.html)
@@ -164,14 +164,14 @@ Source: Infrastructure as Code
 
 ---
 
-## Continuously availability
+#### Continuously availability
 * How to handle change without taking the service down?
   * If something go wrong - fast detection and recovery
 * Traditional solution - Avoid changes!
 
 
 --
-## Service Continuity
+#### Service Continuity
 * How to handle changes/errors without the end-user notice?
 * Uptime
   * 99.999% uptime ("unplanned outages")
@@ -185,7 +185,7 @@ Source: Infrastructure as Code
 
 
 ---
-## Patterns for Zero-Downtime
+#### Patterns for Zero-Downtime
 * Blue-Green replacement
 * Phoenix replacement
   * Impractical on bigger infrastructures
@@ -195,7 +195,7 @@ Source: Infrastructure as Code
 
 
 --
-## Blue-Green replacement
+#### Blue-Green replacement
 ![Blue-Green](../images/blue-green.png)
 
 * Two instances - One for testing, one for production
@@ -209,7 +209,7 @@ Source: Infrastructure as Code
 
 
 --
-## Phoenix Replacement
+#### Phoenix Replacement
 * A new instance of infrastructure is created when a change is made
   * Don´t need two parallel running instances all the time
 * Create the new, testing, switch to it
@@ -218,7 +218,7 @@ Source: Infrastructure as Code
 
 
 --
-## Canary replacement
+#### Canary replacement
 * Used by larger organizations (Google, Facebook...)
 * Deploying the new version of an element alongside the old one, and then routing some portion of usage to the new elements.
 * More effective use of resources
@@ -248,7 +248,7 @@ Source: Infrastructure as Code
 
 -->
 
-## When things goes bad - Disaster recovery
+#### When things goes bad - Disaster recovery
 * DR-plan, what to do when a service is failing
   * What do we need, how much time will it take. Thinking of all stuff going wrong (losing your VCS?)
 * Servers and services will disappear (scaling up and down)
@@ -271,7 +271,7 @@ Source: Infrastructure as Code
 
 
 --
-## Read the book
+#### Read the book
 
 * Chapter 10, 11, 14
 * Chapter 12, 13, 15 (briefly)
