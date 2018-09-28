@@ -75,7 +75,7 @@ During this meetings you should describe what you have done, how you have separa
 Some meeting have pre-defined topics that should be prepared in advanced:
 
 * Meeting 1 - see Part 1. You should also decide on a project planing system (use the Github built-in?), how the group should work with VCS, how to report your time in the project and so on.
-* Meeting 2 - Present end motivate an image overview of the new infrastructure (which kind of servers, versions, software and so on)
+* Meeting 2 - Present and motivate an image overview of the new infrastructure (which kind of servers, versions, software and so on)
 * ...
 
 ## Remember
