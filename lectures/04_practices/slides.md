@@ -1,7 +1,7 @@
-## Contents
+### Contents
 
 * Some content will also be accessed in 2DV611, Continuous Delivery
-* Software Engineering Practices for infrastructure
+* Software Engineering Practices for operating infrastructure
   * System quality
   * VCS for infrastructure
     * Branching
@@ -16,13 +16,13 @@
 ---
 #### Software Engineering Practices for infrastructure
 * Chapter 10
-* Use proven tools and technics can be used to build quality in the system
-  * Start delivering working, useful code fast
+* Use proven tools and strategies to build quality into the process
+* Expect that the system and its requirements will change
+* Start delivering working, useful code fast
   * Continuous delivering necessary and simple increments
-  * Ensure that each change is well tested
+* Ensure that each change is well tested
   * Get fast feedback on every change
-  * Expect that the system and its requirements will change
-  * ...Agile manifesto
+* ...Agile manifesto
 
 
 --
@@ -60,34 +60,80 @@ Note: Looked down - security levels
 #### VCS for infrastructure
 
 * Everything but artifacts that can be build from the code already in the VCS repository, data, log files, passwords, security secrets.
-* Branching (common techniques)
-  * Feature Branching
-    * When a person or a group works on a isolated feature. Merging when ready!
-  * Release Branching
-    * When new releases are put into production a branch is created to reflect the current version (to fix bugs, security). The new release is the master trunc
-  * Continuous Integration
-    * All work is committed to the trunc, fully tested and working in production.
-    * Merge code as fast as possible to detect problems fast (with tests)
-    * When error/fail, fix the problem (or revert) before anyone else commits.
-    * Avoid "merge debts"
-  * In a pragmatic world these could be combined
+* Not only version control - Work processes in the team
+  * Many team members - how to check in code
+  * Coordinate changes
+* Branching
+  * Make a branch to keep work isolated
+  * Lots of different branch patterns
+    * feature branching, release branching...
+  * Never have long-lived branches
+* Continuous Integration
+  * All work is committed to the trunc, fully tested and working in production.
+  * Merge code as fast as possible to detect problems fast (with tests)
+
 
 Note: uncomet tests, timepressure...
 
 
 --
-#### Managing major infrastructure features
+#### Manage major infrastructure changes
 * Delivering complex systems in an agile way
   * Break down into smaller changes (can´t always be done)
-  * Slowly replaces old system
-* Keep changes hidden in production
-  * Parallel systems, old and new
-    * Feature hiding - Deploy but don´t let users or system use the features - When functionality isn´t completed and fully tested.
-    * **Feature toggles** - Implement configuration setting to toggle feature on and off (for different environments, for different users, for different system components)
-    * Branch by abstraction - Create a abstraction layer for the change, "feature toogles" for using old component in production, new in testing environment.
+* Parallel systems, old and new
+  * Slowly replaces old system  
+  * Start with "non-critical services"  
+  * Select "candidate-service"
 
+
+--
+#### Patterns for Zero-Downtime
+* Blue-Green replacement
+* Phoenix replacement
+  * Impractical on bigger infrastructures
+    * Sub-sections, loosely coupled services
+* Canary replacement
+
+
+
+--
+#### Blue-Green replacement
+![Blue-Green](../images/blue-green.png)
+
+* Two instances - One for testing, one for production
+* Switching, fail back to the old if problem
+* If proven, hold the old to prepare next change
+* Intelligent routing
+
+Source: Infrastructure as Code
+
+<!-- {_style="text-align: right; font-size:60%"} -->
+
+
+--
+#### Phoenix Replacement
+* A new instance of infrastructure is created when a change is made
+  * Don´t need two parallel running instances all the time
+* Create the new, testing, switch to it
+  * Keeping the old one until the new proven in use.
+* Basis for immutable infrastructure
+
+
+--
+#### Canary replacement
+* Used by larger organizations (Google, Facebook...)
+* Deploying the new version of an element alongside the old one, and then routing some portion of usage to the new elements.
+* More effective use of resources
+
+![canary](../images/canary.png)
+
+
+Source: Infrastructure as Code
+
+<!-- {_style="text-align: right; font-size:60%"} -->
 
 ---
+
 #### Testing your infrastructure
 
 * Agile approach to testing, TDD, Automated testing for fast feedback
@@ -183,52 +229,6 @@ Source: Infrastructure as Code
     * Cloud-native software (page 279 - Morris)- [12-factor applications](https://12factor.net/)
 * Data Continuity
 
-
----
-#### Patterns for Zero-Downtime
-* Blue-Green replacement
-* Phoenix replacement
-  * Impractical on bigger infrastructures
-    * Sub-sections, loosely coupled services
-* Canary replacement
-
-
-
---
-#### Blue-Green replacement
-![Blue-Green](../images/blue-green.png)
-
-* Two instances - One for testing, one for production
-* Switching, fail back to the old if problem
-* If proven, hold the old to prepare next change
-* Intelligent routing
-
-Source: Infrastructure as Code
-
-<!-- {_style="text-align: right; font-size:60%"} -->
-
-
---
-#### Phoenix Replacement
-* A new instance of infrastructure is created when a change is made
-  * Don´t need two parallel running instances all the time
-* Create the new, testing, switch to it
-  * Keeping the old one until the new proven in use.
-* Basis for immutable infrastructure
-
-
---
-#### Canary replacement
-* Used by larger organizations (Google, Facebook...)
-* Deploying the new version of an element alongside the old one, and then routing some portion of usage to the new elements.
-* More effective use of resources
-
-![canary](../images/canary.png)
-
-
-Source: Infrastructure as Code
-
-<!-- {_style="text-align: right; font-size:60%"} -->
 
 
 ---
