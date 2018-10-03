@@ -212,41 +212,6 @@ Source: Infrastructure as Code
 
 ---
 
-
-
-<!--
---
-#### Service Continuity
-* How to handle changes/errors without the end-user notice?
-* Uptime
-  * 99.999% uptime ("unplanned outages")
-* Dynamic server pool
-  * Running health checks, replaces failed servers
-  * Could hide real problems
-  * Could affect software designed (some architectures assume static infrastructure)
-    * Stateful sessions, local data storing, static configuration
-    * Cloud-native software (page 279 - Morris)- [12-factor applications](https://12factor.net/)
-* Data Continuity
-
-
-
----
-
-## Data Continuity
-* How to handle our data - if the components use read/write data storage, this can be a challenge.
-* Replicating data redundantly
-  * Ensure it is replicated across multiple instances, with redundancy
-  * Could be recovered if a node is lost (what if many lost nodes?)
-* Regenerating data
-  * Getting data from other systems - load into runtime
-* Delegating data persistence
-  * Put the data on a dedicated service
-* Backing up to persistent storage
-  * Be sure to understand where your data is - Confusion in the cloud
-  * Make sure your backups are routinely retrieved and used - use it in your test environment?
-
--->
-
 #### When things goes bad - Disaster recovery
 * DR-plan, what to do when a service is failing
   * What do we need, how much time will it take. Thinking of all stuff going wrong (losing your VCS?)
