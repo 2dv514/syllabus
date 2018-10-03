@@ -73,6 +73,8 @@ Note: Looked down - security levels
 
 Note: uncomet tests, timepressure...
 
+
+---
 #### Continuously availability
 * How to handle change without taking the service down?
   * If something go wrong - fast detection and recovery
