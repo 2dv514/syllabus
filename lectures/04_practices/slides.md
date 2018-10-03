@@ -5,11 +5,9 @@
   * System quality
   * VCS for infrastructure
     * Branching
-    * Handling features/changes
+    * Continuous availability
 * Testing the infrastructure
   * Test pyramid
-  * Operational qualities
-* Continuous availability
 * Prepare for **when** things go wrong
 
 
@@ -75,6 +73,11 @@ Note: Looked down - security levels
 
 Note: uncomet tests, timepressure...
 
+#### Continuously availability
+* How to handle change without taking the service down?
+  * If something go wrong - fast detection and recovery
+* Traditional solution - Avoid changes!
+
 
 --
 #### Manage major infrastructure changes
@@ -129,25 +132,23 @@ Source: Infrastructure as Code
 
 
 Source: Infrastructure as Code
-
 <!-- {_style="text-align: right; font-size:60%"} -->
 
----
 
+---
 #### Testing your infrastructure
 
 * Agile approach to testing, TDD, Automated testing for fast feedback
+  * https://docs.ansible.com/ansible/latest/reference_appendices/test_strategies.html
 * Test pyramid
   * Many, fast running low level test, syntax validation, unit tests
   * Medium-level test, build and test server instances
   * High-level tests, deploy and test multi-tier services
 
 ![test pyramid from book](../images/testing-pyramid.png)
-
-<!-- {_class="center" _style="width: 10%"} -->
+<!-- {_class="center" _style="width: 8%"} -->
 
 Source: Infrastructure as Code
-
 <!-- {_style="text-align: right; font-size:60%"} -->
 
 
@@ -160,20 +161,19 @@ Source: Infrastructure as Code
     * Linting, ex [ansible-lint](https://github.com/willthames/ansible-lint)
     * "coding hygiene", Simple, readable, Code standard
     * Unit testing, ex. ChefSpec
-    * running configuration definitions to be run without actually applying (emulate)
+    * Run test that don´t have long build process
 
 
 --
 #### Middle-level testing
 * Building templates, create instance and validate it is running by running some tests
   * OS-level checks
-* Should not test individual components. Making servers ready to integrate
-* The resources (servers, networking ect) should be disposed after each test
+* Testing that servers are ready to integrate
+* The resources (servers, networking ect) should be disposed after each test 
   * Rebuild from scratch before every test
 * Local virtualized test
   * Vagrant - catching problem fast
-* [kitchen.ci](http://kitchen.ci/)
-  * Plugins for Puppet, Chef and Ansible
+
 
 
 --
@@ -210,12 +210,9 @@ Source: Infrastructure as Code
 
 ---
 
-#### Continuously availability
-* How to handle change without taking the service down?
-  * If something go wrong - fast detection and recovery
-* Traditional solution - Avoid changes!
 
 
+<!--
 --
 #### Service Continuity
 * How to handle changes/errors without the end-user notice?
@@ -232,7 +229,7 @@ Source: Infrastructure as Code
 
 
 ---
-<!--
+
 ## Data Continuity
 * How to handle our data - if the components use read/write data storage, this can be a challenge.
 * Replicating data redundantly
