@@ -13,7 +13,7 @@
 
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/04_practices/index.html#/)
-- [Recording 2017-09-26, 13.15 (Youtube)](https://youtu.be/Z2pqOnJlO_Y?t=9m57s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
+- [Recording 2018-10-03, 10.15 (Youtube)](https://youtu.be/Z2pqOnJlO_Y?t=9m57s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
 
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Z2pqOnJlO_Y?t=9m57s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
