@@ -22,6 +22,12 @@
 ### Resources
 Chapter 10-15 in Morris
 
+
+## Guest Lecture - Monitoring
+- [Recording](https://youtu.be/bhGXLfH11ck?t=13m46s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP) 2016-08-30, 13.15 (Youtube)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bhGXLfH11ck?t=13m46s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
+
 ## Lecture 05 - Monitoring
 * Overview
 * Core concepts
@@ -29,12 +35,9 @@ Chapter 10-15 in Morris
 
 ### Presentations
 - [HTML-presentation](https://cdn.rawgit.com/2dv514/syllabus/master/lectures/05_monitoring/index.html#/)
-
-<!--
 - [Recording 2017-10-04, 13.15 (Youtube)](https://youtu.be/94XMsI2OqvM?t=18m25s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP)
 
+
+**OBS Detta är en inspelning från förra året.**
 <br />
 <iframe width="560" height="315" src="https://www.youtube.com/embed/94XMsI2OqvM?t=18m25s&list=PLSWJPPj5sKmpZej7KLd0yJcOMXP0ZVUtP" frameborder="0" allowfullscreen></iframe>
-
-### Resources
--->
