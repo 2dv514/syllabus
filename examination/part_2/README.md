@@ -40,6 +40,12 @@ Your monitoring solution should at least implement the following:
 * some visualization of the services availability
 * if one of the monitored services becomes unavailable some kind of suitable notification should trigger
 
+## Data from ACME
+Here is a zip-file from the company:
+[Wordpress files and data](acme_wordpress_files_and_data.tar.gz)
+
+If you need more data or information be sure to ask for it on the iterative meetings where the teachers also will act as customers.
+
 ## Examination
 Along with the code for creating your infrastructure the group should provide a project report, instructions for running your solution and some video material showing how it works. The report could be in pdf or as the README.md in your GitHub repository. The following part are mandatory to be included in the report:
 
