@@ -42,7 +42,7 @@ Your monitoring solution should at least implement the following:
 
 ## Data from ACME
 Here is a zip-file from the company:
-[Wordpress files and data](acme_wordpress_files_and_data.tar.gz)
+[Wordpress files and data](https://github.com/2dv514/syllabus/blob/master/examination/part_2/acme_wordpress_files_and_data.tar.gz?raw=true)
 
 If you need more data or information be sure to ask for it on the iterative meetings where the teachers also will act as customers.
 
