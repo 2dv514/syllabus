@@ -82,7 +82,8 @@ Some meeting have pre-defined topics that should be prepared in advanced:
 
 * Meeting 1 - see Part 1. You should also decide on a project planing system (use the Github built-in?), how the group should work with VCS, how to report your time in the project and so on.
 * Meeting 2 - Present and motivate an image overview of the new infrastructure (which kind of servers, versions, software and so on)
-* ...
+* Meeting 3 - Present a working prototype of the infrastructure. All pieces don´t need to be in place but the main part like at least a working Wordpress-instance
+* The following meetings will be discussed during the meetings.
 
 ## Remember
 As said before this could be a pretty big project with many technologies. Therefore you must be effective when split the work between team members. Maybe take different roles where some is responsible for the software, some starts learning and test the configuration management tool and so on.
