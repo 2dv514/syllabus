@@ -11,11 +11,11 @@ You will investigate at least three different tools. The below two is mandatory 
 You will be examined trough a written report. Below you could see a recommended structure of your report. You are free to add own sub-headlines if you want. Please think about the structure and your language. **Use headlines, make paragraphs, check your spelling and grammar. Use images, tables if needed**. Think that this report should be read 
 
 
-* Introduction
+#### Introduction
   * Give an introduction to the subjects of the report, explain definitions.
   * An presentation and overview of the tools
   * How the tools can support the idea of DevOps
-* The tools in this report
+####The tools in this report
   * Ansible
     * Describe the tool and its history
     * Describe the problems the tool is constructed to solve
@@ -37,7 +37,7 @@ You will be examined trough a written report. Below you could see a recommended 
     * Give some simple example of syntax, and explain it for the reader
     * List pros and cons, and how it differs from the other tools in this report
     * Give examples of good (hopefully free) web resources for learning the tool
-* Your personal reflection of your findings
+#### Your personal reflection of your findings
   * If you will choose a tool to learn which is of your interest? motivate your choice.
 
 As usually you must use the [IEEE-reference system](https://ieee-dataport.org/sites/default/files/analysis/27/IEEE%20Citation%20Guidelines.pdf) when handling your sources and references used in the text.
