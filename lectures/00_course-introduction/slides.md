@@ -42,7 +42,7 @@ ME! ME! ME!
   * Report (individual)
     * Do some research about configuration- and provisioning tools
     * Peer-review before final hand-in
-  * Practical assignment (group work)
+  * Practical assignment (group project)
     * Using tools for running Infrastructure as Code.
     * Setting up a infrastructure in CS Cloud
   * Oral hearing 
@@ -50,6 +50,18 @@ ME! ME! ME!
 
 
 <!-- {_style="font-size: 90%"} -->
+--
+## About the group project
+* Important to be able to work in teams
+* Weekly meeting with customer/coach
+* Version controlled code!!!
+  * Git
+  * Github project (Kanban-like) assign ticket (labelled and assigned issues)
+* How to do an individual examination on a group project?
+  * After every week every group member hand-out 20 points
+  * Along with the assigned ticket
+
+
 ---
 <!-- Literature -->
 ## Literature
@@ -71,3 +83,7 @@ ME! ME! ME!
 
 <!-- {_style="margin-right: 25%"} -->
 
+## How to start
+* Register on course (if you fulfil the requirements)
+* Join the slack channel
+* Start with the report - Make sure to do a study plan
