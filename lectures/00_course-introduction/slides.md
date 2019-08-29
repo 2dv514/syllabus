@@ -1,194 +1,55 @@
-<!-- Syllabus -->
+## 2dv517 (former known as 2dv514)
+* Deployment Infrastructures (from HT19)
+  * The (nearly) same as "Configuration management for DevOps" - 2dv514
+  * GitHub organization will be the old name (2dv514)
+* Infrastructure as Code (IaC)
+
+--
+## Who will have this course?
+
+ME! ME! ME!
+[insert image]
+
+
+--
+
 ## Syllabus
-[Syllabus](http://kursplan.lnu.se/kursplaner/kursplan-2dv514-1.pdf)
+[Syllabus](http://kursplan.lnu.se/kursplaner/kursplan-2dv517-1.pdf)
 * Main field of study
   * Computer Science (dv)
 * Progression
   * G2F
 * Prerequisites
   * at least 60 hp Computer Science
-  * 1DV032
+  * 1DV032 (and of course 1DV031)
 
 
 --
 <!-- Goals -->
 ## After the course you should understand:
 <!-- {_style="font-size: 140%"} -->
-* compare and evaluate different server configuration management platforms
-* generate automatic server configuration
-* describe the components of a server infrastructure
-* create monitoring in an operations environment
-* explain the value, history and building blocks concerning the concept of DevOps
-
+* jämföra och utvärdera olika plattformar för serverkonfigurationshantering (1)
+* generera automatisk serverkonfigurering (2)
+* redogöra för komponenter och designmönser för Infrastructure as Code (3)
+* skapa monitorering för övervakning i en driftsmiljö (4)
 <!-- {_class="lnu-font-size-80 lnu-margin-right-30"} -->
 
 
 ---
 ## Approach
-* The course is divided into two parts
-    * Configuration Management Techniques
-    * Group Project
+* Lectures (mostly pre-recorded), Guest lectures, Peer-instructions
+* Examination
+  * Report (individual)
+    * Do some research about configuration- and provisioning tools
+    * Peer-review before final hand-in
+  * Practical assignment (group work)
+    * Using tools for running Infrastructure as Code.
+    * Setting up a infrastructure in CS Cloud
+  * Oral hearing 
+    * Theoretical part of the course
+
 
 <!-- {_style="font-size: 90%"} -->
-
-
-
---
-<!-- Part 1 -->
-## Part 1 - Configuration Management Techniques
-Goals:
-* compare and evaluate different server configuration management platforms
-    * patterns for defining infrastructure
-    * history
-    * pros and cons
-    * personal preferences
-
-<!-- {_style="margin-right: 25%"} -->
-Todo:
-* 3 lecture
-* 1 examination assignment (written examination)
-
-<!-- {_style="font-size: 75%"} -->
-
-
---
-## Part 2 - Group Project
-Goals:
-* generate automatic server configuration
-* create monitoring in an operations environment
-
-<!-- {_class="lnu-margin-right-30"} -->
-Todo:
-* 2 Lecture
-* 1 group assignment
-* 1 oral hearing
-
-<!-- {_style="font-size: 75%"} -->
-
-
---
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td style="vertical-align: top;">w35</td>
-            <td>
-                <ul>
-                    <li>Lecture 00 – Course Introduction   </li>
-                    <li>Lecture 01 - Introduction and definitions</li>
-                    <li>Go through the Study Material</li>
-                    <li>Start working on the assignment</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top;">w36</td>
-            <td>
-                <ul>
-                    <li>Lecture 02 - Configuration management tools</li>
-                    <li>Assignment</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td style="vertical-align: top;">w37</td>
-            <td>
-                <ul>
-                    <li>Lecture 03 - Patterns</li>
-                    <li>Assignment</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
---
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-          <td style="vertical-align: top;">w38</td>
-          <td>
-              <ul>
-                  <li><strong>10.00am September 22th – Deadline</strong> handling in Assignment</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w39</td>
-          <td>
-              <ul>
-                <li>Lecture 04 - Practices</li>
-                <li>Group Project</li>
-                <li>Tutoring Tuesdays and Thursdays</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w40</td>
-          <td>
-              <ul>
-                <li>Lecture 05 - Monitoring</li>
-                <li>Group Project</li>
-                <li>Tutoring Tuesdays and Thursdays</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
-
-
---
-## Preliminary planing  and deadlines
-<table style="margin-left: 5px;">
-    <thead>
-        <tr>
-            <th>Week</th>
-            <th>To do</th>
-        </tr>
-    </thead>
-    <tbody>
-          <td style="vertical-align: top;">w41</td>
-          <td>
-              <ul>
-                <li>Group Project</li>
-                <li>Tutoring Tuesdays and Thursdays</li>
-              </ul>
-          </td>
-      </tr>
-          <td style="vertical-align: top;">w42</td>
-          <td>
-              <ul>
-                <li>Group Project</li>
-                <li>Tutoring Tuesdays and Thursdays</li>
-              </ul>
-          </td>
-      </tr>
-      <tr>
-          <td style="vertical-align: top;">w43</td>
-          <td>
-              <ul>
-                  <li><strong>October 25th - Deadline</strong> oral hearing</li>
-              </ul>
-          </td>
-      </tr>
-    </tbody>
-</table>
-
-
 ---
 <!-- Literature -->
 ## Literature
@@ -210,9 +71,3 @@ Todo:
 
 <!-- {_style="margin-right: 25%"} -->
 
-
----
-<!-- webpage 
-## Course evaluation
-[ 2DV514 Course Evaluation Spring 2016]( 2DV514-course-evaluation-vt16.pdf)
--->
