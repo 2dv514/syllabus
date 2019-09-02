@@ -48,10 +48,13 @@ We have not set a fixed requirements of pages for this assignment so we expect t
 For the first hand-in (the peer-review) you are free to choose to write your name on your report (you could be anonymous). 
   
 ## Hand-in instructions for peer-instruction
-* No later then **08.00am 20 of September**
+* No later then **08.00am 19 of September**
 * The format must be PDF
 * You send the report to **john.haggerud@lnu.se**
 * The same day you get an other students report to review with further instructions
+* You read your peer and send a review before 24/9 08:00
+* After you gone through the review on your work you send in the final version before 26/9 08:00
+  * This time you must send the report to: john.haggerud.LNU@analys.urkund.se 
 
 ## Late hand-in
 If you could not produce a report to the date above we will have **one late hand-in** during this course with the following requirements:

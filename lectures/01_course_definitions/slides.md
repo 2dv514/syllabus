@@ -140,6 +140,71 @@ DevOps is a reaction!
 
 
 ---
+
+## Definitions
+
+![confuse](../images/confusion.png)
+
+
+--
+
+#### Some words
+
+* Provisioning (by the book - Morris)
+  * "making an infrastructure element"
+    * Getting network device/servers ready to use (installed, configured and registered)
+* Orchestration
+  * Arranging or coordinating multiple systems
+  * Provisioning many servers at once
+    * Running same task on many servers at once
+    * Automate tasks and orchestrate processes
+* Configuration Management
+  * Practices for handling provisioning and orchestration
+    * Configure your server or infrastructure repeatedly, consistently, transparent...
+* Infrastructure as Code
+  * Applying (agile) software engineering techniques on operations
+* Deployment Infrastructures
+  * Cloud-based Dynamic Infrastructure platforms for deploying software
+
+
+--
+![overview](../images/overview.png)
+
+
+---
+## Dynamic Infrastructure platform
+
+* public/private IaaS, community IaaS...AWS, Azure, Google Cloud, OpenStack
+  * Tools for configuration management and provisioning
+  * Must be programmable, on-demand, self-service
+    * Having programmable interfaces
+    * Create and destroy immediately
+    * Be able to customize your given resources
+* May create servers but is not responsible on what is on them (but could be)
+* May pass configuration info to a server configuration tool (network addresses)
+* This is a requirement for Infrastructure As Code
+(Morris - chapter 2, Should be recap)
+
+
+--
+## Tools requirements
+
+  - Programmable
+    - GUI is nice but we want APIs or declarative languages
+  - Scriptable & Powerful command-line tools
+    * CLI program
+    * Take input from other tools (stdin, environment variables, command-line parameters)
+    * Output should be able to be used by other tools
+  - Support for unattended execution
+    * No manual steps in the scripts
+    * Triggable scripts, notifications
+      * Testable, auto-scaling and recovery routines
+  - Externalized configurations
+    * Treated as software source code
+    * Transparently, consistently, accurate test instances, version control
+
+
+
 <!-- Configuration management -->
 ## Configuration management
 "Configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life."
