@@ -6,6 +6,22 @@
 
 
 --
+## UDM - core courses
+
+* 1dv031 - System Administration I
+  * Networking 101, Linux, shell scripting, installing and configure servers (DNS, HTTP...)
+* **1dv032** - System administration II
+  * Cloud computing, Virtualization, Containers, Docker, Kubernetes, scaling and monitoring 
+* 2dv527 - Deployment Infrastructures  
+  * Building complete infrastructures with version controlled code
+  * Running monitoring services
+* 2dv611 - Continuous Delivery
+  * Continuous Integration, Building pipelines for software
+  * Getting software to production 
+
+
+--
+
 ### People on this course
 
 <div class="fragment fade-in center">
