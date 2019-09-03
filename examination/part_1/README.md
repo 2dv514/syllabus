@@ -12,7 +12,7 @@ You will be examined trough a written report. Below you could see a recommended 
 
 
 ### Introduction
-  * Give an introduction to the subjects of the report, explain definitions.
+  * Give an introduction to the subjects of the report, explain technical definitions used in the report.
   * An presentation and overview of the tools
   * How the tools can support the idea of DevOps
 
