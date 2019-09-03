@@ -31,7 +31,7 @@ You will be examined trough a written report. Below you could see a recommended 
     * Give some simple example of syntax, and explain it for the reader
     * List pros and cons, and how it differs from the other tools in this report
     * Give examples of good (hopefully free) web resources for learning the tool
-  * Your choice of tool
+  * Your choice of tool (must be some kind of "configuration management- and provisioning tool")
     * Describe the tool and its history
     * Describe the problems the tool is constructed to solve
     * Describe its payment models, licenses etc.
