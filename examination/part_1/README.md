@@ -8,7 +8,7 @@ You will investigate at least three different tools. The below two is mandatory 
   
 
 ## Disposition
-You will be examined trough a written report. Below you could see a recommended structure of your report. You are free to add own sub-headlines if you want. Please think about the structure and your language. **Use headlines, make paragraphs, check your spelling and grammar. Use images, tables if needed**. Think that this report should be read 
+You will be examined trough a written report. Below you could see a recommended structure of your report. You are free to add own sub-headlines if you want. Please think about the structure and your language. **Use headlines, make paragraphs, check your spelling and grammar. Use images, tables if needed**. 
 
 
 ### Introduction
