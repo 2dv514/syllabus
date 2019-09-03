@@ -1,8 +1,8 @@
 ## Part 1 - Evaluation of configuration management tools
 
-In this assignment you are going to learn about modern configuration management- and provisioning tools and present your findings in a written rapport. The goal with this assignment is that you will get deeper understanding of what different modern tools there are for automating the build process in a cloud-based infrastructure. You will also compare these tools and try to to describe their differences. At the latest step you should create your own opinion about these tools and motivate it.
+In this assignment you are going to learn about modern configuration management- and provisioning tools and present your findings in a written rapport. The goal with this assignment is that you will get deeper understanding of what different modern tools there are made for automating the build process in a cloud-based infrastructure. You will also compare these tools and try to to describe their differences. At the latest step you should create your own opinion about these tools and motivate it.
 
-You will investigate at least three different tools. The below two is mandatory but you are free to choose the last one by yourself.
+You will investigate at least three different configuration management- and provisioning tools. The below two is mandatory but you are free to choose the last one by yourself.
   * [Ansible](https://www.ansible.com/)
   * [Terraform](https://www.terraform.io/)
   
