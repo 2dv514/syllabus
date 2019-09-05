@@ -1,4 +1,19 @@
+--
+## Tools requirements
 
+  - Programmable
+    - GUI is nice but we want APIs or declarative languages
+  - Scriptable & Powerful command-line tools
+    * CLI program
+    * Take input from other tools (stdin, environment variables, command-line parameters)
+    * Output should be able to be used by other tools
+  - Support for unattended execution
+    * No manual steps in the scripts
+    * Triggable scripts, notifications
+      * Testable, auto-scaling and recovery routines
+  - Externalized configurations
+    * Treated as software source code
+    * Transparently, consistently, accurate test instances, version control
 
 
 ---

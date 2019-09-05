@@ -1,9 +1,7 @@
 
----
+# Confusion
 
-## Definitions
-
-![confuse](../images/confusion.png)
+![confuse](../images/confusion.gif)
 
 
 --
@@ -13,29 +11,25 @@
 * Provisioning (by the book - Morris)
   * "making an infrastructure element"
     * Getting network device/servers ready to use (installed, configured and registered)
-* Orchestration
+* Orchestration<!-- {_class="fragment"} -->
   * Arranging or coordinating multiple systems
   * Provisioning many servers at once
     * Running same task on many servers at once
     * Automate tasks and orchestrate processes
-* Configuration Management
+* Configuration Management<!-- {_class="fragment"} -->
   * Practices for handling provisioning and orchestration
     * Configure your server or infrastructure repeatedly, consistently, transparent...
-* Infrastructure as Code
-  * Applying (agile) software engineering techniques on operations
-* Deployment Infrastructures
+* Infrastructure as Code<!-- {_class="fragment"} -->
+  * Applying (agile) software engineering techniques on Configuration Management
+* Deployment Infrastructures<!-- {_class="fragment"} -->
   * Cloud-based Dynamic Infrastructure platforms for deploying software
-
-
---
-![overview](../images/overview.png)
 
 
 ---
 ## Dynamic Infrastructure platform
 
 * public/private IaaS, community IaaS...AWS, Azure, Google Cloud, OpenStack
-  * Tools for configuration management and provisioning
+  * Have own or support tools for configuration management and provisioning
   * Must be programmable, on-demand, self-service
     * Having programmable interfaces
     * Create and destroy immediately
@@ -47,37 +41,20 @@
 
 
 --
-## Tools requirements
-
-  - Programmable
-    - GUI is nice but we want APIs or declarative languages
-  - Scriptable & Powerful command-line tools
-    * CLI program
-    * Take input from other tools (stdin, environment variables, command-line parameters)
-    * Output should be able to be used by other tools
-  - Support for unattended execution
-    * No manual steps in the scripts
-    * Triggable scripts, notifications
-      * Testable, auto-scaling and recovery routines
-  - Externalized configurations
-    * Treated as software source code
-    * Transparently, consistently, accurate test instances, version control
-
-
-
 <!-- Configuration management -->
 ## Configuration management
 "Configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life."
 
 * Manage changes throughout the system lifecycle of complex systems
 * ITIL, formally an acronym for Information Technology Infrastructure Library
-  *  ITIL volumes as guidance to their IT organizations
+  * ITIL volumes as guidance to IT organizations for delivering high quality it-services
+  * https://en.wikipedia.org/wiki/Configuration_Management_(ITSM)
 
 
 --
 ## Configuration management
 
-* Mange all of the changes that happen whitin your project.
+* Mange all of the changes that happen within your project.
 * Records the evolution of your systems and applications
 * Handle and govern how your team collaborates
 
@@ -91,7 +68,7 @@ So it is about using version control systems?
 
 --
 
-## Configuration management and DevOps
+#### Configuration management and DevOps
 
 * Be able to reproduce any of the environments (operating system, patch level, network configs, software stack and so on)
   * Automation tools, infrastructure as code
@@ -104,7 +81,7 @@ So it is about using version control systems?
 
 
 --
-## Configuration management - Our focus
+## Our focus
 
 * Infrastructure as code (IoC)
   * Infrastructure automation based on practices for software development
@@ -112,16 +89,16 @@ So it is about using version control systems?
     * "Code should be written to describe the desired state of the new machine"
   * Virtualization, cloud, containers, server automation...
   * Defining your environments as code
-    * code as documentation, no manual differences (snowflake servers)
+    * code as documentation, avoid manual failures
 * Tools for automation of infrastructure
-  * Chef, Ansible, Puppet...
+  * Chef, Ansible, Puppet, terraform...
+
 
 
 ---
-## Challenges for IoC
+## Challenges for IoC to solve
 
-  * Server sprawl
-    * It is easy to create new servers, hard to manage to mandatory
+  
   * Configuration Drift
     * Difference can creep in over time
       * Manual "fixing" a specific problem on one servers
@@ -130,6 +107,8 @@ So it is about using version control systems?
       * Someone optimize a specific application server to quickfix a performance issue
   * Snowflake servers
     * A server that can´t be replicated === Fragile infrastructure
+  * Server sprawl
+    * It is easy to create new servers, hard to manage to mandatory
   * Automation fear - Kill and rebuild
   * Erosion
     * Things will happen over time (security updates, disk space, restart processes, hardware error)
@@ -151,12 +130,11 @@ So it is about using version control systems?
 ---
 ## Reading to do
 
-* Read (at least) chapter 1 in Morris book
+* Read chapter 1-2 in Morris book
   * ![book](../images/book.gif) http://shop.oreilly.com/product/0636920039297.do
 * Infrastructure as code - the engine of DevOps
   * https://www.epam.com/about/news-and-events/in-the-news/2015/infrastructure-as-code-the-engine-at-the-heart-of-devops
-* 2017 State of DevOps Report
-  * https://puppet.com/resources/whitepaper/state-of-devops-report
+
 
 
 ---
