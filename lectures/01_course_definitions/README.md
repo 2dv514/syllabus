@@ -1,6 +1,6 @@
 ## Resources
 
-[Presentation](https://gitcdn.link/repo/2dv514/syllabus/master/lectures/01_course_definitions/index.html)
+[Presentation](https://gitcdn.link/cdn/2dv514/syllabus/master/lectures/01_course_definitions/index.html)
 
 ## Resources
 * Chapter 1-2, Morris
