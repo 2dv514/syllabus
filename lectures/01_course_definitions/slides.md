@@ -1,12 +1,17 @@
 
-# Confusion
+## Confusion
 
 ![confuse](../images/confusion.gif)
 
 
+### All these words...
+<!-- {_class="fragment"} -->
+
+
+
 --
 
-#### Some words
+#### Some definitions
 
 * Provisioning (by the book - Morris)
   * "making an infrastructure element"
@@ -28,25 +33,24 @@
 ---
 ## Dynamic Infrastructure platform
 
-* public/private IaaS, community IaaS...AWS, Azure, Google Cloud, OpenStack
+* public/private IaaS, community IaaS...AWS, Azure, Google Cloud, OpenStack<!-- {_class="fragment"} -->
   * Have own or support tools for configuration management and provisioning
-  * Must be programmable, on-demand, self-service
+  * Must be programmable, on-demand, self-service<!-- {_class="fragment"} -->
     * Having programmable interfaces
     * Create and destroy immediately
     * Be able to customize your given resources
-* May create servers but is not responsible on what is on them (but could be)
-* May pass configuration info to a server configuration tool (network addresses)
-* This is a requirement for Infrastructure As Code
-(Morris - chapter 2, Should be recap)
+* This is a requirement for Infrastructure As Code<!-- {_class="fragment"} -->
+  * (Morris - chapter 2, Should be recap)
 
 
 --
 <!-- Configuration management -->
 ## Configuration management
-"Configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life."
 
-* Manage changes throughout the system lifecycle of complex systems
-* ITIL, formally an acronym for Information Technology Infrastructure Library
+"Configuration management (CM) is a systems engineering process for establishing and maintaining consistency of a product's performance, functional, and physical attributes with its requirements, design, and operational information throughout its life."<!-- {_class="fragment"} -->
+
+* Manage changes throughout the system lifecycle of complex systems<!-- {_class="fragment"} -->
+* ITIL, formally an acronym for Information Technology Infrastructure Library<!-- {_class="fragment"} -->
   * ITIL volumes as guidance to IT organizations for delivering high quality it-services
   * https://en.wikipedia.org/wiki/Configuration_Management_(ITSM)
 
@@ -59,25 +63,24 @@
 * Handle and govern how your team collaborates
 
 
---
-
+<div>
 So it is about using version control systems?
-<br><br>
-![cleese](../images/cleese.gif)
+
+<img src="../images/cleese.gif" width="30%" />
+</div><!-- {_class="fragment"} -->
+
 
 
 --
-
 #### Configuration management and DevOps
 
-* Be able to reproduce any of the environments (operating system, patch level, network configs, software stack and so on)
+* Be able to reproduce any of the environments (operating system, patch level, network configs, software stack and so on)<!-- {_class="fragment"} -->
   * Automation tools, infrastructure as code
-* Be able to handle changes (and roll-backs) to the items and deploy to all of my environments
-  * Version control
+* Be able to handle changes (and roll-backs) to the items and deploy to all of my environments<!-- {_class="fragment"} -->
+  * Manage dependencies, components, software configuration
   * Develop vs. testing vs. staging vs. production
-* Be able to trace all of your changes
-* Manage dependencies, components, software configuration
-* Can every team member get the information they need?
+* Can every team member get the information they need?<!-- {_class="fragment"} -->
+
 
 
 --
@@ -91,39 +94,39 @@ So it is about using version control systems?
   * Defining your environments as code
     * code as documentation, avoid manual failures
 * Tools for automation of infrastructure
-  * Chef, Ansible, Puppet, terraform...
+  * Chef, Ansible, Puppet, Terraform...
 
 
 
 ---
 ## Challenges for IoC to solve
+* Configuration Drift <!-- {_class="fragment"} -->
+  * Difference can creep in over time
+    * Manual "fixing" a specific problem on one servers
+    * Updating the application platform on just some servers (not all applications)
+    * The configuration settings for same kind of servers differs from different people
+    * Someone optimize a specific application server to quickfix a performance issue
+* Erosion <!-- {_class="fragment"} -->
+  * Things will happen over time (security updates, disk space, restart processes, hardware error)
+* Snowflake servers <!-- {_class="fragment"} -->
+  * A server that can´t be replicated === Fragile infrastructure
+* Server sprawl <!-- {_class="fragment"} -->
+  * It is easy to create new servers, hard to manage to mandatory
+* Automation fear - Kill and rebuild <!-- {_class="fragment"} -->
 
-  
-  * Configuration Drift
-    * Difference can creep in over time
-      * Manual "fixing" a specific problem on one servers
-      * Updating the application platform on just some servers (not all applications)
-      * The configuration settings for same kind of servers differs from different people
-      * Someone optimize a specific application server to quickfix a performance issue
-  * Snowflake servers
-    * A server that can´t be replicated === Fragile infrastructure
-  * Server sprawl
-    * It is easy to create new servers, hard to manage to mandatory
-  * Automation fear - Kill and rebuild
-  * Erosion
-    * Things will happen over time (security updates, disk space, restart processes, hardware error)
 
 
 --
 ## Principle of IoC
-* It should be easy to destroy and rebuild systems/servers
+* It should be easy to destroy and rebuild systems/servers 
   * The design should support a infrastructure that is always changing
   * "Treat your servers as cattle, not pets"
-* System should be consistent
+* System should be consistent <!-- {_class="fragment"} -->
   * Same type of servers should have identical configurations - server templates
-* If a task can be scripted, script it!
+  * Servers of same kind should have same state
+* If a task can be scripted, script it! <!-- {_class="fragment"} -->
   * Definition files, consistency, documentation
-* Testability
+* Testability <!-- {_class="fragment"} -->
   * Bringing automated testing into Ops
 
 
