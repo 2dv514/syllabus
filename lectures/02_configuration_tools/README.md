@@ -2,7 +2,7 @@
 
 [Presentation](https://gitcdn.link/repo/2dv514/syllabus/master/lectures/02_configuration_tools/index.html)
 
-[Recording](https://youtu.be/0zYzcFa8gu0)
+[Recording](https://www.youtube.com/watch?v=ps76XxlboTw)
 
 
 ## Resources
