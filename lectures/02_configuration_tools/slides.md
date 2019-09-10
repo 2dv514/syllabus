@@ -1,22 +1,10 @@
+## Automation
+
+![automation](../images/automation_comic.png)
+
+
 --
-## Tools requirements
 
-  - Programmable
-    - GUI is nice but we want APIs or declarative languages
-  - Scriptable & Powerful command-line tools
-    * CLI program
-    * Take input from other tools (stdin, environment variables, command-line parameters)
-    * Output should be able to be used by other tools
-  - Support for unattended execution
-    * No manual steps in the scripts
-    * Triggable scripts, notifications
-      * Testable, auto-scaling and recovery routines
-  - Externalized configurations
-    * Treated as software source code
-    * Transparently, consistently, accurate test instances, version control
-
-
----
 ## Some (wider) automation principles
 * Left-over principle
   * Automate everything you can - with reason
@@ -26,7 +14,7 @@
   * More from human perspective. Analyze how people solve tasks and complement with automation
   * Give human the knowledge of tasks before automating it
 * Automation bring stability to the system but can take away the skills maintaining the systems   
-* All should be programmers?
+* Automation programmers?
 
 Source: The practice of cloud system administration
 
@@ -46,30 +34,31 @@ Source: The practice of cloud system administration
 
 
 ---
-## Server configuration...
+## Automation...
 
   ...in a dynamic infrastructure
 
   * Manual Configuration and written documentation
-    * Simple and works in very small situations
+    * Simple and (only?) works in very small situations
     * Documentation get easy stale
+    * Configuration drift, snowflake servers and so on...
   * Some manual, many automation scripts
-     - Hard to manage, share, configuration drift, ad-hoc
-     - Writing script code that do stuff step-by-step
+     - Hard to manage, share, ad-hoc
+     - May need lots of written documentation
   * **Configure the state** rather then step-by-step
      - Out of state with notify the systems
-     - Using modern configuration tools
-     - Using Domain-specific languages (DSL) instead of script
-     - Self-documentation
+     - Using modern provisioning/configuration tools
+     - Using Domain-specific languages (DSL) instead of scripts
+     - Self-documentation!
 
 
 
 --
-## Server updates...
+## Handling automated updates...
 
 * Configuration synchronization
  * hourly schedules
- * push or pull changes
+ * push or pull changes?
 * **Immutable** Infrastructure
  * Completely replacing servers
  * Changes are made by building new servers
@@ -77,9 +66,30 @@ Source: The practice of cloud system administration
  * Containerized Infrastructure
 
 
+
+---
+## Tools requirements
+
+  - Programmable
+    - GUI is nice but we want APIs or declarative languages
+  - Scriptable & Powerful command-line tools
+    * CLI program
+    * Take input from other tools (stdin, environment variables, command-line parameters)
+    * Output should be able to be used by other tools
+  - Support for unattended execution
+    * No manual steps in the scripts
+    * Triggable scripts, notifications
+      * Testable, auto-scaling and recovery routines
+  - Externalized configurations
+    * Treated as software source code
+    * Transparently, consistently, accurate test instances, version control
+
+
+
+
 --
 ## Server configuration tools
-  * Create, provision and update servers - new generation tools
+  * Create, configure and update servers - new generation tools
     * Ansible, Chef, Puppet
   * Configuration enforcement
     * Desired state (not step-by-step), prevent configuration drift
