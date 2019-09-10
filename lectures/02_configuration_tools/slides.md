@@ -1,20 +1,35 @@
+## Content
+
+* About automation
+  * Principles and patterns
+* Configuration management/provisioning tools
+  * Requirements
+  * Examples
+
+
+
+---
 ## Automation
 
+<div>
 ![automation](../images/automation_comic.png)
+</div><!-- {_class="center"} -->
+
+Source: https://xkcd.com/1319/
+
 
 
 --
-
-## Some (wider) automation principles
+## Some automation principles
 * Left-over principle
-  * Automate everything you can - with reason
-* Compensatory Principle
+  * Automate everything you can - with reason!
+* Compensatory Principle<!-- {_class="fragment"} -->
   * Fitt's list (1951) of attributes "decides" what to automate
-* The Complementary Principle
+* The Complementary Principle<!-- {_class="fragment"} -->
   * More from human perspective. Analyze how people solve tasks and complement with automation
   * Give human the knowledge of tasks before automating it
-* Automation bring stability to the system but can take away the skills maintaining the systems   
-* Automation programmers?
+* Automation bring stability to the system but can take away the skills maintaining the systems<!-- {_class="fragment"} -->   
+* Automation programmers?<!-- {_class="fragment"} -->
 
 Source: The practice of cloud system administration
 
@@ -25,12 +40,14 @@ Source: The practice of cloud system administration
 ### When talking about automation scripts
   * Idempotent
    * The script should be able to execute many times without bad effects
-  * Pre-checks, Post-checks
+  * Pre-checks, Post-checks<!-- {_class="fragment"} -->
    * Testable
-  * Visible failures
-   * The team must get the notice
-  * Parameterized
-  * Big complex system, many script files, hard to manage, API versioning  
+  * Visible failures <!-- {_class="fragment"} -->
+   * We must know!
+  * Parametrized <!-- {_class="fragment"} -->
+    * Do not hard code stuff
+  * Big complex system, many script files, hard to manage, API versioning <!-- {_class="fragment"} -->
+    * Manage code... 
 
 
 ---
@@ -42,10 +59,10 @@ Source: The practice of cloud system administration
     * Simple and (only?) works in very small situations
     * Documentation get easy stale
     * Configuration drift, snowflake servers and so on...
-  * Some manual, many automation scripts
+  * Some manual, many automation scripts<!-- {_class="fragment"} -->
      - Hard to manage, share, ad-hoc
      - May need lots of written documentation
-  * **Configure the state** rather then step-by-step
+  * Configure the state rather then step-by-step<!-- {_class="fragment"} -->
      - Out of state with notify the systems
      - Using modern provisioning/configuration tools
      - Using Domain-specific languages (DSL) instead of scripts
@@ -57,9 +74,8 @@ Source: The practice of cloud system administration
 ## Handling automated updates...
 
 * Configuration synchronization
- * hourly schedules
- * push or pull changes?
-* **Immutable** Infrastructure
+ * "Hourly" schedules
+* Immutable Infrastructure <!-- {_class="fragment"} -->
  * Completely replacing servers
  * Changes are made by building new servers
  * Minimal drift between environments
@@ -68,36 +84,20 @@ Source: The practice of cloud system administration
 
 
 ---
-## Tools requirements
-
-  - Programmable
-    - GUI is nice but we want APIs or declarative languages
-  - Scriptable & Powerful command-line tools
-    * CLI program
-    * Take input from other tools (stdin, environment variables, command-line parameters)
-    * Output should be able to be used by other tools
-  - Support for unattended execution
+## Tools for IaC
+  * Create, destroy, configure and update infrastructure - new generation tools
+  - Programmable <!-- {_class="fragment"} -->
+    - We want APIs or declarative languages
+      * Triggable scripts, notifications
+      * Testable and recovery routines
+  - Support for unattended execution<!-- {_class="fragment"} -->
     * No manual steps in the scripts
-    * Triggable scripts, notifications
-      * Testable, auto-scaling and recovery routines
-  - Externalized configurations
-    * Treated as software source code
-    * Transparently, consistently, accurate test instances, version control
-
-
-
-
---
-## Server configuration tools
-  * Create, configure and update servers - new generation tools
-    * Ansible, Chef, Puppet
-  * Configuration enforcement
-    * Desired state (not step-by-step), prevent configuration drift
-  * Enables collaboration
-    * One change, updates the whole infrastructure
-    * Configuration repository (often enterprise products)
-  * Version control friendly
-  * Abstraction, high-level definitions
+  - Externalized configurations<!-- {_class="fragment"} -->
+  * Define desired state, prevent configuration drift<!-- {_class="fragment"} -->
+  * Enables collaboration <!-- {_class="fragment"} -->
+    * Version control friendly
+    * Configuration repository 
+  * Strive for abstraction, high-level definitions<!-- {_class="fragment"} -->
 
 
 
@@ -111,8 +111,8 @@ Source: The practice of cloud system administration
 ```bash
 sudo useradd -m EllenNu -p PASSWORD
 sudo usermod -a -G students EllenNu
-```
-
+``` 
+<!-- {_class="fragment"} -->
 ```yaml
 user "EllenNu"
   state active
@@ -120,19 +120,20 @@ user "EllenNu"
   home  "/home/ellennu"
   shell "/bin/csh"
 ```
-* Declarative vs imperative
+<!-- {_class="fragment"} -->
+* Declarative vs imperative <!-- {_class="fragment"} -->
   * First do X, then do Y vs. should be Z
-  * Using predefined libraries (working over many platforms)
+  * Using predefined libraries/providers (working over many platforms)
   * Easy to reuse over different environments - Use parameters
 
 
 ---
-## Tools for configuring servers
-
-* Ansible, CFEngine, Chef, Puppet, SaltStack
-* Pull model
+### Configuration management tools
+* Designed to install and manage software on existing servers
+* Ansible, Chef, Puppet, SaltStack...<!-- {_class="fragment"} -->
+* Pull model<!-- {_class="fragment"} -->
   * Central repository, agents on every node pulling configuration
-* Push model
+* Push model<!-- {_class="fragment"} -->
   * Central server pushing changes (through SSH keys)
 
 <img src="../images/CMTlogos.jpg" width="35%" />
@@ -141,80 +142,19 @@ user "EllenNu"
 
 
 --
-## Puppet
-* Created in 2005
-* Open Source (GNU General Public License), built on top of Ruby
-* Writing modules and manifests
-
-```Ruby
-node 'host2' {
-  class { 'apache': }             # use apache module
-  apache::vhost { 'example.com':  # define vhost resource
-    port    => '80',
-    docroot => '/var/www/html'
-  }
-}
-
-```
+### Provisioning tools
+* Designed to build your infrastructure (servers, load balancers, databases, networking configuration, etc)
+  * Leaving the job of configuring those servers to other tools.
+* CloudFormation and Terraform<!-- {_class="fragment"} -->
 
 
 --
-## Chef
-* Created in 2008
-* Open source (Apache License 2.0), mostly Ruby
-* Writing cookbook and recipes
+## Tools for IaC
+* These two categories are not exact definitions
+  * Most configuration management tools can do some provisioning and most provisioning tools can do some configuration management. 
+  * Docker (or Packer), the most configuration management are taken care of. With Docker and Packer<!-- {_class="fragment"} -->
+    * Images with configured software
 
-```Ruby
-include_recipe "apache2"
-include_recipe "mysql::server"
-include_recipe "php"
-include_recipe "php::module_mysql"
-include_recipe "apache2::mod_php5"
-
-apache_site "default" do
-  enable true
-end
-
-```
-
-
---
-## Ansible
-* Created in 2012
-* Open source (GNU General Public License)
-* Playbooks, roles, using YAML-configurations, SSH
-
-```YAML
-- hosts: webservers
-  vars:
-    http_port: 80
-  become_user: root
-  tasks:
-  - name: ensure apache is at the latest version
-    yum: name=httpd state=latest
-  - name: write the apache config file
-    template: src=/srv/httpd.j2 dest=/etc/httpd.conf
-    notify:
-    - restart apache
-  - name: ensure apache is running (and enable it at boot)
-    service: name=httpd state=started enabled=yes
-  handlers:
-    - name: restart apache
-      service: name=httpd state=restarted
-```
-
-
----
-## Written Report
-* Investigate and compare these techniques
-* No need to set up, try to present your findings with relevance to the literature and this lecture
-* Explain it as if you were talking to your classmates
-* A couple of pages per technique
-* Think about one of these you want to use to set up a system in the project assignment
-
-
----
-## Quick demo
 
 
 ---
