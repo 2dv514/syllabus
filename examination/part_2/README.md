@@ -1,4 +1,4 @@
-## Examination assignment 2 - 2DV514
+## Examination assignment 2 - 2DV517
 
 This text describes the second assignment in the course 2dv517. This assignment is a group assignment.
 
