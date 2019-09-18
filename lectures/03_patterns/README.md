@@ -8,3 +8,4 @@ This recording is done in 2018 which means that some course specific stuff we ta
 
 ## Resources
 Chapter 6-9 in Morris
+

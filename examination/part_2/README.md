@@ -1,89 +1,83 @@
 ## Examination assignment 2 - 2DV514
 
-This text describes the second assignment in the course 2DV514. This assignment could seem pretty big but remember that it will be done in groups.
+This text describes the second assignment in the course 2dv517. This assignment is a group assignment.
+
+
+## Purpose of this assignment
+
+This assignment strive to give the student the following experience:
+
+* Practical working with a provisioning/configuration management tool for solving a defined scenario.
+* Practical experience of analyzing a problem and define a infrastructure need for solving the problem.
+* The practical experience of installing and configure a monitoring system for that infrastructure
+* The process of working with the ideas of "Infrastructure as code" in a group project
 
 
 ## The problem to solve
 The company [ACME Corporation](https://en.wikipedia.org/wiki/Acme_Corporation) are having some problem with their website.
-After releasing new products last months there website have been receiving a lot more traffic. This has led to the site being slow and sometime unresponsive. The site is built around the CMS system [Wordpress](https://wordpress.org/download/) and today it's hosted on an single server running all of the required tools like database, static files, WordPress etc.
-Another problem the company has with the website is how it is being configured. Two years ago they had a hard drive crash and had to rebuild there infrastructure. They had no automated configuration so they had to rebuild it manually. 
+After releasing new products last months there website have been receiving a lot more traffic. This has led to the site being slow and sometime unresponsive. The site is built around the CMS system [Wordpress](https://wordpress.org/download/) and today it's hosted on an single server running all of the required services and tools like database, static files, WordPress core code etc.
+Another problem the company has with the website is how it is being configured over the years. Today the server running the whole thing is like a snowflake server and they are afraid to upgrade Wordpress to the new version. But now they have decided to add some resources to this problem.
 
-The company have given your group the assignment to fix these two problems. To be able to handle the load increase on the web site you must introduce a load balancer and to be able to do that you must separate the different services. You should redesign the infrastructure to support the DevOps mindset with configuration management when moving the old single instance solution to a more scalable one hosted on a OpenStack cloud using a configuration management tool.
+The company have given your group the assignment to fix these problems. To be able to handle the load increase on the web site you must introduce a load balancer and also separate the different services and be able to scale these (ability to add more instances). You should redesign the infrastructure to support the DevOps mindset with configuration management when moving the old single instance solution to a more scalable one hosted on a OpenStack cloud using a configuration management tool.
 
-## Part 1 - Splitting up the single instance Wordpress
-Before starting with the infrastructure you need to know the different components of Wordpress.
+Today the system look like this:
+
 ![Image of the software architecture](https://github.com/2dv514/syllabus/raw/master/examination/part_2/wordpress-architecture.png)
 
-As shown in the figure, Wordpress 3 main components running on Ubuntu 16.04 LTS:
+As shown in the figure, the service today includes three main components running on a Ubuntu 16.04 LTS:
 
-1. The Wordpress code base (version 4.6) and the code for plug-ins - This runs on an web server with support for PHP and only changes when you update/upgrade Wordpress or one of the plugins.
+1. The Wordpress code base (version 4.6 - this is an old version) and the code for plug-ins - This runs on an web server with support for PHP and only changes when you update/upgrade Wordpress or one of the plugins.
 2. Database server, MySQL or MariaDB - This holds persistent data like user accounts, site pages, news, plugin data and so on.
-3. User files - Administrators of the site can upload images and other document to the platform, these are usually stored in a folder on the web server. But when you want to scale the web servers you need to move the storage of these files to a central location, like a file server.
+3. User files - Administrators of the site can upload images and other document to the platform, these are usually stored in a folder on the web server.
 
-The group needs to analyze and discuss the existing infrastructure and develop a new solution that supports ACME's new needs. During the first supervision meeting you will present your solution.
+## What the company want
 
-*Please see below for more information about the this meetings and what the group should prepare for the first meeting*
+The company want more scalability. They want to be able to have at least three instances of the Wordpress server but probably want to easy add more. The database should be split up to own instances and provide a master-server replication where the master has write/read and the slave are read only. The files should live on a own file server or maybe a volume if possible.
 
-## Part 2 - The infrastructure
-When you have a clearer overview of the different components of the new design you will have to figure out how the infrastructure should look like. What servers are needed? How to handle load balancing? Proxies? Monitoring? DNS servers? Backup?
+The company also want a monitoring service so that they easy could monitoring the servers as much and reasonable as you think. There should be an easy way to get a visual view over the monitoring and also get some kind of alarm if something bad is happening (server going down, CPU panicking or something)
 
-The group should discuss this matters and provide a image of the infrastructure when having the second supervisor meeting (see below).
+This is the companies wishes and your assignment is to solve this a much as possible.
 
-Of course the infrastructure should be handle with the mindset of DevOps and "Infrastructure as Code". You should use a configuration management tool and all of the infrastructure specific code should be version managed in a git repository provided by the course management. This repository will be part of the examination.
-
-## Part 3 - Monitoring your infrastructure
-You can spend a lot of time setting up the perfect monitoring solution for your system. Since you do not have unlimited time to do this you will have to prioritize.
-Your monitoring solution should at least implement the following:
-
-* monitor availability for some services in your system
-* stored collection of metrics (like CPU, RAM, disk space for DBs)
-* some visualization of the services availability
-* if one of the monitored services becomes unavailable some kind of suitable notification should trigger
-
-## Data from ACME
-Here is a zip-file from the company:
+#### Data from the company
+Here is a zip-file (containing the recent data) from the company:
 [Wordpress files and data](https://github.com/2dv514/syllabus/blob/master/examination/part_2/acme_wordpress_files_and_data.tar.gz?raw=true)
 
 If you need more data or information be sure to ask for it on the iterative meetings where the teachers also will act as customers.
 
+## What is expected of you
+
+As a student in the group you are expected to add at least 20 hours a week on this course. You are free to plan your time with the group.
+The vision of the project is to solve the problem for the company but since this is a course project where the goal of learning is more important then the artefact provided you won't fail the course even if the whole solution is not complete and you can show through commits, meetings with supervisor, assigned tickets/issues and the documentation of the project that you have spent the time needed and tried to solve the problem.
+
+As a student you are expected to be active in the project and be contactable for the group during the project. If not you will be thrown out of the group and be failing this part of the course (meaning next time for this is next years course)
+
+## How to work in the group
+You must use VCS in your group. Your code should be commited often and you should have some strategy for commiting code (feature branch, pull request etc.). Every group gets a private GitHub repository to work against. You must use the [GitHub repository project board](https://help.github.com/en/articles/about-project-boards) and all things you do must be assigned trough [tickets/issues](https://guides.github.com/features/issues/) to give transparency to what is going on in the project.
+
+The group are free to split the work between its members, decide which role each and one have in the group and when you have your own meetings (an advice is to have daily stand-ups). One time a week the group (one or more members in the group) will have a meeting with the course management. During this meetings you should describe what you have done, how you have separated the work and how you will work until the next meeting. This meeting is at maximum 30 minutes per time so be prepared before it. The course managements role in this meetings is both coaching and play the role of customer.
+
+At the end of every week you must provide points to your project members. This is done through an anonymous form. You give away points depending on how active the members of your group have been. That will give the examiner (along with the assigned issues) a better tool for individual examination. More info about this in the first meeting.
+
+
 ## Examination
-Along with the code for creating your infrastructure the group should provide a project report, instructions for running your solution and some video material showing how it works. The report could be in pdf or as the README.md in your GitHub repository. The following part are mandatory to be included in the report:
 
-#### The members of the group, name, emails
-#### Introduction - describing the assignment
+### Group artefact
+Along with the code for creating your infrastructure the group should provide a video video recording showing how it works. The video should show how you run your code to create and tear down your infrastructure, show how the monitoring works (what it measures and how it notifies) and also explain how the solution could handle changeability of the software.
+Of course the groups works should be visible in the Github repo (commits, issues, project board and so on)
 
-#### Solution
+### Individual examination
+You will be examined by your activity in the group project. Examiner will track your issues and analyse the points given by your project members. You should also provide an individual reflection of the project before the project deadline. The following parts must be included in this:
+<br><br>
+* Your name
+* Your personal reflection of the project
+  * What went good
+  * What went bad
+* Do you like to keep this group for the next course
+<br>
+This should be sent to the course management before deadline of the project.
 
-**How does your system handle changeability?** If we want do upgrade the version of some of the application platforms how will it work? How will security updates be handle? Try to describe and perform a scenario and how your solution is handling this. Along with the report record a video that show how a upgrade to ubuntu version 18.04 and Wordpress version 4.9.8 is done.
+You will also have an individual oral hearing in the end where the theoretical part of the course is checked.
 
-**How does your team work with version control tools** Describe which tactics where used when working with version control. How could you diverse the work and avoid merge conflicts?
-
-**Recreation** Your infrastructure should be easy to destroy and recreate with as so little work as possible. Describe how your system work and how you recreate the infrastructure. Also record a video showing how the infrastructure creates and is removed. There should also be very clear instructions for the examiners how to create the infrastructure on a empty OpenStack project. This should be able to do with one command for creating and one for destroying.
-
-
-
-### Individual diary and reflection
-Every single student should also send a individual work diary describing how many hours and what that student have worked in the project. The diary should give the examiners a quick and simple guidance to what you have done in the project. It is very important that this work is done every day and not in the end of the project!
-
-You should also provide a text with your own reflections on the following questions:
-
-* What have you learned from this project?
-* What has gone good and what has gone bad in the project?
-* What will you do different next time?
-
-This should be sent to the course e-mail before deadline.
-
-## Iterative meetings - Supervisor meetings
-During the project the group will have meetings with the course management. There are several pass booked into the course schedule. This meetings are mandatory. Your group decides which of you that will participate in the meetings (all or just one person) but some should always be there.
-
-During this meetings you should describe what you have done, how you have separated the work and how you will work until the next meeting. Try to keep these meetings effective and be prepared. For example; you want to talk about your infrastructure, then make sure you have an image over it so there will be no problem to understand each other.
-
-Some meeting have pre-defined topics that should be prepared in advanced:
-
-* Meeting 1 - see Part 1. You should also decide on a project planing system (use the Github built-in?), how the group should work with VCS, how to report your time in the project and so on.
-* Meeting 2 - Present and motivate an image overview of the new infrastructure (which kind of servers, versions, software and so on)
-* Meeting 3 - Present a working prototype of the infrastructure. All pieces don´t need to be in place but the main part like at least a working Wordpress-instance
-* The following meetings will be discussed during the meetings.
-
-## Remember
-As said before this could be a pretty big project with many technologies. Therefore you must be effective when split the work between team members. Maybe take different roles where some is responsible for the software, some starts learning and test the configuration management tool and so on.
+## How to start
+Make sure to have a initial group meeting discussing the project. You also have to decide what tools to use, your commit strategies and how to approach the problem. All of this point should be discussed before the first meeting with the course management. You also may have some questions about the project itself so collect these to this first meeting since all information isn't in this text. 
+Then we take it from there...
