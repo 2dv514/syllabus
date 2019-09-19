@@ -5,12 +5,13 @@ This text describes the second assignment in the course 2dv517. This assignment 
 
 ## Purpose of this assignment
 
-This assignment strive to give the student the following experience:
+This assignment strive to give the student:
 
-* Practical working with a provisioning/configuration management tool for solving a defined scenario.
+* Practical experience with a provisioning/configuration management tool for solving a defined scenario.
 * Practical experience of analyzing a problem and define a infrastructure need for solving the problem.
-* The practical experience of installing and configure a monitoring system for that infrastructure
-* The process of working with the ideas of "Infrastructure as code" in a group project
+* Practical experience of installing and configure a monitoring system for that infrastructure
+* Practical experience working with the ideas of "Infrastructure as code" in a group project
+* Experience and solving problems that occur in the context of the project
 
 
 ## The problem to solve
