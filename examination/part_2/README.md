@@ -15,11 +15,11 @@ This assignment strive to give the student:
 
 
 ## The problem to solve
-The company [ACME Corporation](https://en.wikipedia.org/wiki/Acme_Corporation) are having some problem with their website.
-After releasing new products last months there website have been receiving a lot more traffic. This has led to the site being slow and sometime unresponsive. The site is built around the CMS system [Wordpress](https://wordpress.org/download/) and today it's hosted on an single server running all of the required services and tools like database, static files, WordPress core code etc.
-Another problem the company has with the website is how it is being configured over the years. Today the server running the whole thing is like a snowflake server and they are afraid to upgrade Wordpress to the new version. But now they have decided to add some resources to this problem.
+The company [ACME Corporation](https://en.wikipedia.org/wiki/Acme_Corporation) is having some problem with their website.
+After releasing new products last months their website have been receiving a lot more traffic. This has led to the site being slow and sometime unresponsive. The site is built around the CMS system [Wordpress](https://wordpress.org/download/) and today it is hosted on an single server running all of the required services and tools like database, static files, WordPress core code etc.
+Another problem the company has with the website is how it is being configured over the years. Today the server running the whole thing is like a snowflake server and they are afraid to upgrade Wordpress to a newer, more secure, version. But now they have decided to add some resources to this problem.
 
-The company have given your group the assignment to fix these problems. To be able to handle the load increase on the web site you must introduce a load balancer and also separate the different services and be able to scale these (ability to add more instances). You should redesign the infrastructure to support the DevOps mindset with configuration management when moving the old single instance solution to a more scalable one hosted on a OpenStack cloud using a configuration management tool.
+The company have given your group the assignment to try to fix these problems. To be able to handle the load increase on the web site you must introduce a load balancer (hopefully with high availability) and also separate the different services and be able to scale these (ability to add more instances). You should redesign the infrastructure to support the DevOps mindset with configuration management when moving the old single instance solution to a more scalable one hosted on a OpenStack cloud using a configuration management tool.
 
 Today the system look like this:
 
@@ -82,3 +82,6 @@ You will also have an individual oral hearing in the end where the theoretical p
 ## How to start
 Make sure to have a initial group meeting discussing the project. You also have to decide what tools to use, your commit strategies and how to approach the problem. All of this point should be discussed before the first meeting with the course management. You also may have some questions about the project itself so collect these to this first meeting since all information isn't in this text. 
 Then we take it from there...
+
+## Project instructions video
+<iframe width="542" height="305" src="https://www.youtube.com/embed/wVpNXEVRnyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
