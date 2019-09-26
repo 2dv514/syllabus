@@ -1,9 +1,8 @@
 ### Contents
 * Software Engineering Practices for operating infrastructure
-  * System quality
   * VCS for infrastructure
     * Branching
-    * Continuous availability
+  * Continuous availability
 * Testing the infrastructure
   * Test pyramid
 
@@ -25,7 +24,7 @@ is how quickly and safely changes are made to it
 
 --
 #### Software Engineering Practices for infrastructure
-* Use proven tools and strategies to build quality into the process<!-- {_class="fragment"} -->
+* Use proven tools and strategies to build quality into the process
 * Expect that the system and its requirements will change<!-- {_class="fragment"} -->
 * Start delivering working, useful code fast<!-- {_class="fragment"} -->
   * Continuous delivering necessary and simple increments
@@ -118,10 +117,10 @@ is how quickly and safely changes are made to it
 ![Blue-Green](../images/blue-green.png)
 
 * Two instances/environments - One for testing, one for production
-* Switching, fail back to the old if problem
-* If proven, hold the old to prepare next change
-* Intelligent routing
-* Need two sets of infrastructure!
+  * Switching, fail back to the old if problem
+  * If proven, hold the old to prepare next change
+  * Intelligent routing
+  * Need two sets of infrastructure!
 
 
 --
@@ -189,7 +188,7 @@ is how quickly and safely changes are made to it
 * Testing integrating external systems <!-- {_class="fragment"} -->
 * Should using the same structure and tooling as in production <!-- {_class="fragment"} -->
 * Slowest testing - keep it effective <!-- {_class="fragment"} -->
-* [ServerSpec](http://serverspec.org/) <!-- {_class="fragment"} -->
+
 
 
 --
@@ -198,7 +197,6 @@ is how quickly and safely changes are made to it
   * Defining targets and thresholds
   * Performance tests
     * [ab - Apache HTTP server benchmarking tool](https://httpd.apache.org/docs/2.4/programs/ab.html)
-  * Scanning for common programming errors
   * Scanning for known security errors (Common vulnerabilities and Exposures system - CVE)
     * https://cve.mitre.org/cve/cve.html
 * **Monitoring**
