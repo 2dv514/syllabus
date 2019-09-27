@@ -1,8 +1,8 @@
 ## Resources
 
-[Presentation](https://gitcdn.link/repo/2dv514/syllabus/master/lectures/04_prectice/index.html)
+[Presentation](https://gitcdn.link/repo/2dv514/syllabus/master/lectures/04_practice/index.html)
 
-[Recording](#)
+[Recording](https://youtu.be/lTi5eG_kryA)
 
 
 ## Resources
