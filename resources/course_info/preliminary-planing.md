@@ -86,7 +86,7 @@
           <td style="vertical-align: top;">w44</td>
           <td>
               <ul>
-                  <li><strong>October 31 - Deadline</strong> oral hearing</li>
+                  <li><strong>October 29, 30</strong> oral hearing</li>
                   <li><strong>November 4- Deadline</strong>project assignment</li>
               </ul>
           </td>
