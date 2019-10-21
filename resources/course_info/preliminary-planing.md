@@ -87,6 +87,7 @@
           <td>
               <ul>
                   <li><strong>October 31 - Deadline</strong> oral hearing</li>
+                  <li><strong>November 4- Deadline</strong>project assignment</li>
               </ul>
           </td>
       </tr>
